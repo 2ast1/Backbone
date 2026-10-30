@@ -1,0 +1,1095 @@
+# ==============================================================================
+#                        Backbone Sprachkonfiguration
+#                              Sprache: Deutsch
+# ==============================================================================
+# Diese Datei enthält alle Nachrichten und Texte für das Backbone-Plugin.
+# Farbcodes mit '&' (z.B. &a, &c, &l) sowie Hex-Farben (&#RRGGBB) werden unterstützt.
+# ==============================================================================
+
+prefix: "&9[Backbone] "
+
+common:
+  no-permission: "&cDazu hast du keine Berechtigung! &7({permission})"
+  no-permission-plain: "&cDazu hast du keine Berechtigung!"
+  player-only: "&cDieser Befehl kann nur von einem Spieler ausgeführt werden!"
+  player-not-found: "&cDer Spieler &e{player} &ckonnte nicht gefunden werden."
+  player-not-online: "&cDer Spieler &e{player} &cist nicht online."
+  unknown-subcommand: "&cUnbekannter Unterbefehl: &e{subcommand}"
+  usage: "&cVerwendung: &e{usage}"
+  enabled: "&aAktiviert"
+  disabled: "&cDeaktiviert"
+  enabled-lower: "&aaktiviert"
+  disabled-lower: "&cdeaktiviert"
+  online: "&aOnline"
+  offline: "&cOffline"
+  online-tag: "&a(Online)"
+  offline-tag: "&7(Offline)"
+  "yes": "&aJa"
+  "no": "&cNein"
+  unknown: "Unbekannt"
+  none: "Keine"
+  permanent: "Permanent"
+  no-reason: "Kein Grund angegeben"
+  boolean-usage: "&cBitte gib true oder false an: &e/{label} [true|false]"
+
+duration:
+  zero: "0 Sekunden"
+  year-singular: "Jahr"
+  year-plural: "Jahre"
+  month-singular: "Monat"
+  month-plural: "Monate"
+  day-singular: "Tag"
+  day-plural: "Tage"
+  hour-singular: "Stunde"
+  hour-plural: "Stunden"
+  minute-singular: "Minute"
+  minute-plural: "Minuten"
+  second-singular: "Sekunde"
+  second-plural: "Sekunden"
+
+backbone:
+  reload-success: "&aAlle Konfigurationen und Daten wurden erfolgreich von der Festplatte synchronisiert! &7({ms}ms)"
+  github:
+    header: "&7Offizielles GitHub-Repository:"
+    console: "&7Offizielles GitHub-Repository: &b{url}"
+    hover-open: "&eKlicke hier, um das GitHub-Repository im Browser zu öffnen!"
+    clickable-hint: " &7(Klickbar)"
+    hover-url: "&7Öffnet {url}"
+  version:
+    version: "&7Version: &ev{version}"
+    authors: "&7Entwickler: &e{authors}"
+  help:
+    header: "&8&m----------------&r &9&lBackbone &8&m----------------"
+    version: "&8» &e/{label} version &7- Zeigt die aktuelle Plugin-Version an"
+    github: "&8» &e/{label} github &7- Öffnet den Link zum GitHub-Repository"
+    setup: "&8» &e/{label} setup &7- Startet den interaktiven Setup-Wizard"
+    reload: "&8» &e/{label} reload &7- Synchronisiert alle Dateien von der Festplatte"
+    footer: "&8&m---------------------------------------------"
+
+money:
+  disabled: "&cDas Economy-System ist aktuell in der config.yml deaktiviert! &7(economy.enabled: false)"
+  usage-console: "&cVerwendung: &e/{label} <Spieler>"
+  balance-self: "&7Dein Kontostand: &e{balance}"
+  balance-other: "&7Kontostand von &e{player}&7: &e{balance}"
+  usage-give: "&cVerwendung: &e/{label} give <Spieler> <Betrag>"
+  usage-take: "&cVerwendung: &e/{label} take <Spieler> <Betrag>"
+  usage-set: "&cVerwendung: &e/{label} set <Spieler> <Betrag>"
+  invalid-positive-amount: "&cBitte gib einen gültigen, positiven Betrag an."
+  negative-amount: "&cDer Betrag kann nicht negativ sein."
+  amount-too-large: "&cDer angegebene Betrag ist zu groß! Das Maximum beträgt 1.000.000.000.000."
+  give-sender: "&aDu hast &e{player} &a{amount} gutgeschrieben."
+  give-target: "&aDir wurden &e{amount} &agutgeschrieben."
+  take-sender: "&cDu hast &e{player} &c{amount} abgezogen."
+  take-target: "&cDir wurden &e{amount} &cabgezogen."
+  set-sender: "&aKontostand von &e{player} &aauf &e{balance} &agesetzt."
+  set-target: "&7Dein Kontostand wurde auf &e{balance} &7gesetzt."
+  baltop:
+    empty: "&cEs sind noch keine Kontodaten vorhanden."
+    header: "&8&m----------------&r &9&lBackbone Baltop &8(&e{page}&7/&e{max_pages}&8) &8&m----------------"
+    entry: "&8Â» &e#{rank} &f{player}&8: &a{balance}"
+    footer: "&8Â» &7Gesamte Geldmenge im Umlauf: &e{total}\n&8&m------------------------------------------------------"
+
+pay:
+  usage: "&cVerwendung: &e/{label} <Spieler> <Betrag>"
+  self-error: "&cDu kannst dir nicht selbst Geld überweisen!"
+  invalid-amount: "&cBitte gib einen gültigen Betrag ein."
+  min-amount: "&cDer Mindestbetrag für eine Überweisung beträgt &e0.01 {currency}&c."
+  insufficient-funds: "&cDafür hast du nicht genug Guthaben! &7(Dein Kontostand: &e{balance}&7)"
+  transfer-failed: "&cDie Überweisung konnte nicht durchgeführt werden."
+  success-sender: "&aDu hast &e{player} &a{amount} überwiesen."
+  success-target: "&aDu hast &e{amount} &avon &e{player} &aerhalten."
+  target-blocked: "&cDer Spieler &e{player} &chat Ãœberweisungen an sich blockiert!"
+  toggle-disabled: "&cDu hast Ãœberweisungen an dich blockiert. Andere Spieler kÃ¶nnen dir kein Geld mehr senden."
+  toggle-enabled: "&aDu hast Ãœberweisungen an dich erlaubt. Andere Spieler kÃ¶nnen dir wieder Geld senden."
+
+gamemode:
+  usage: "&cVerwendung: &e/{label} <0|1|2|3|survival|creative|adventure|spectator> [Spieler]"
+  usage-console: "&cVerwendung: &e/{label} {mode} <Spieler>"
+  usage-direct-console: "&cVerwendung: &e/{label} <Spieler>"
+  unknown-mode: "&cUnbekannter Spielmodus: &e{mode}"
+  valid-modes: "&7Gültige Modi: &e0 (survival), 1 (creative), 2 (adventure), 3 (spectator)"
+  mode:
+    survival: "Überleben"
+    creative: "Kreativ"
+    adventure: "Abenteuer"
+    spectator: "Zuschauer"
+  changed-self: "&7Dein Spielmodus wurde auf &e{mode} &7gesetzt."
+  changed-target: "&7Dein Spielmodus wurde von &e{sender} &7auf &e{mode} &7gesetzt."
+  changed-sender: "&7Spielmodus für &e{player} &7wurde auf &e{mode} &7gesetzt."
+
+fly:
+  usage-console: "&cVerwendung: &e/{label} <Spieler>"
+  toggled-self: "&7Flugmodus: {state}&7."
+  toggled-target: "&7Dein Flugmodus wurde von &e{sender} {state}&7."
+  toggled-sender: "&7Flugmodus für &e{player} {state}&7."
+
+hide:
+  usage-console: "&cVerwendung: &e/{label} <Spieler>"
+  toggled-self: "&7Komplette Unsichtbarkeit (/hide): {state}&7."
+  toggled-target: "&7Deine Unsichtbarkeit (/hide) wurde von &e{sender} {state}&7."
+  toggled-sender: "&7Unsichtbarkeit (/hide) für &e{player} {state}&7."
+
+enderchest:
+  opened-self: "&7Eigene &eEnderchest &7geöffnet."
+  opened-other: "&7Enderchest von &e{player} {status} &7geöffnet."
+  gui-title: "&8Enderchest: &e{player}"
+  readonly-hint: "&eHinweis: Enderchest ist schreibgeschützt (Spieler war seit Plugin-Installation noch nie online)."
+
+inventory:
+  usage: "&cVerwendung: &e/{label} <Spieler>"
+  opened: "&7Inventar von &e{player} {status} &7geöffnet."
+  readonly-hint: "&eHinweis: Inventar ist schreibgeschützt (Spieler war seit Plugin-Installation noch nie online)."
+  gui:
+    title: "&8Inventar: &e{player}"
+    no-helmet: "&7Kein Helm"
+    no-chestplate: "&7Keine Brustplatte"
+    no-leggings: "&7Keine Beinschiene"
+    no-boots: "&7Keine Stiefel"
+    no-offhand: "&7Keine Schildhand"
+    cursor-lore: "&e&o[Mauszeiger des Spielers]"
+    cursor-offline: "&7Mauszeiger: Nicht verfügbar (Offline)"
+    cursor-empty: "&7Mauszeiger leer"
+    row6-info: "&8Reihe 6: Offene UI / Temporäre Plätze"
+    advanced-locked-title: "&cErweiterte UI gesperrt"
+    advanced-locked-lore: "&7Berechtigung &e&nbackbone.inventory.advanced&7 erforderlich"
+    temp-ui-offline: "&7Temporäre UI: Nicht verfügbar (Offline)"
+    temp-ui-none: "&7Keine temporäre UI aktiv"
+    crafting-2x2: "&62x2 Inventar-Crafting"
+    workbench: "&6Werkbank (3x3) &7[Klick für Live-Ansicht]"
+    anvil: "&6Amboss &7[Klick für Live-Ansicht]"
+    enchanting: "&dZaubertisch &7[Klick für Live-Ansicht]"
+    smithing: "&eSchmiedetisch &7[Klick für Live-Ansicht]"
+    container: "&eOffener Behälter: {type} &7[Klick für Live-Ansicht]"
+    head:
+      status-online: "&7Status: &aOnline"
+      status-offline: "&7Status: &cOffline"
+      gamemode: "&7Spielmodus: &e{gamemode}"
+      health: "&7Leben: &c{health} &7/ &c{maxhealth} ❤"
+      hunger: "&7Hunger: &6{food} &7/ 20"
+      level: "&7Level: &a{level} &7(EXP: {exp}%)"
+      location: "&7Ort: &b{world} &7(X: {x}, Y: {y}, Z: {z})"
+      uuid: "&7UUID: &8{uuid}"
+
+maintenance:
+  default-kick-message: "&cDer Server befindet sich aktuell im Wartungsmodus!\n&7Bitte versuche es zu einem späteren Zeitpunkt erneut."
+  default-motd: "&cDer Server befindet sich im Wartungsmodus!\n&7Wir sind bald wieder da!"
+  already-enabled: "&cDer Wartungsmodus ist bereits aktiviert!"
+  already-disabled: "&cDer Wartungsmodus ist bereits deaktiviert!"
+  status: "&7Wartungsmodus: {status}"
+  session-message-info: "&7Session-Nachricht: &r{message}"
+  usage: "&cVerwendung: &e/{label} [on|off|toggle|status|message <Nachricht>]"
+  current-session-message: "&7Aktuelle Session-Wartungsnachricht: &r\n{message}"
+  current-default-message: "&7Aktuelle Standard-Wartungsnachricht: &r\n{message}"
+  message-tip: "&7Tipp: Verwende &e/maintenance message <Text> &7oder &e/maintenance message reset"
+  message-reset: "&aDie Session-Wartungsnachricht wurde zurückgesetzt. Es wird wieder die Standardnachricht genutzt."
+  message-set: "&aWartungsnachricht für diese Session erfolgreich gesetzt:"
+  broadcast-enabled: "&7Der &cWartungsmodus &7wurde von &e{sender} &aaktiviert&7!{kicked_info}"
+  broadcast-kicked-info: " &8(&e{count} &7Spieler gekickt&8)"
+  broadcast-disabled: "&7Der &cWartungsmodus &7wurde von &e{sender} &cdeaktiviert&7!"
+
+namecolor:
+  disabled: "&cDas Namensfarben-System ist aktuell in der config.yml deaktiviert! &7(namecolor.enabled: false)"
+  usage-console: "&cVerwendung: &e/{label} <Spieler>"
+  current-self: "&7Deine aktuelle Namensfarbe ist: {formatted_name}&r &8(Farbcode: &e{code}&8)"
+  none-self: "&7Du hast aktuell keine eigene Namensfarbe gesetzt (&fStandard: weiß&7)."
+  current-other: "&7Die Namensfarbe von &e{player} &7ist: {formatted_name}&r &8(Farbcode: &e{code}&8)"
+  none-other: "&e{player} &7hat aktuell keine eigene Namensfarbe gesetzt (&fStandard: weiß&7)."
+  remove:
+    none-self: "&cDu hast aktuell keine eigene Namensfarbe gesetzt."
+    success-self: "&aDeine Namensfarbe wurde erfolgreich entfernt."
+    none-other: "&c{player} &chat keine eigene Namensfarbe gesetzt."
+    success-sender: "&aDie Namensfarbe von &e{player} &awurde erfolgreich entfernt."
+    success-target: "&cDeine Namensfarbe wurde von &e{sender} &centfernt."
+  set:
+    usage-header: "&cVerwendung:"
+    usage-self: "&8» &e/{label} <Farbcode> &7(für dich selbst)"
+    usage-other: "&8» &e/{label} <Spieler> <Farbcode> &7(für andere Spieler)"
+    usage-codes: "&7Gültige Farbcodes: &e&0&7-&e&9&7, &e&a&7-&e&f&7, &e&l&7, Hex: &e&#RRGGBB"
+    usage-console: "&cVerwendung: &e/{label} <Spieler> <Farbcode>"
+    invalid-code: "&cUngültiger Farbcode! Bitte verwende Farbcodes wie z.B. &e&c&c, &e&a&c, &e&6&l&c oder Hex-Farben wie &e&#FF5555&c."
+    success-self: "&aDeine Namensfarbe wurde auf {formatted_name} &7(&e{code}&7) gesetzt."
+    success-sender: "&aDie Namensfarbe von &e{player} &awurde auf {formatted_name} &7(&e{code}&7) gesetzt."
+    success-target: "&aDeine Namensfarbe wurde von &e{sender} &aauf {formatted_name} &7(&e{code}&7) gesetzt."
+
+prefix_cmd:
+  disabled: "&cDas Präfix-System ist aktuell in der config.yml deaktiviert! &7(prefix.enabled: false)"
+  usage-console: "&cVerwendung: &e/{label} <Spieler>"
+  current-self: "&7Dein aktueller Präfix ist: &r{formatted_prefix} &8(Farbcode: &e{code}&8)"
+  none-self: "&7Du hast aktuell keinen Präfix gesetzt."
+  current-other: "&7Der Präfix von &e{player} &7ist: &r{formatted_prefix} &8(Farbcode: &e{code}&8)"
+  none-other: "&e{player} &7hat aktuell keinen Präfix gesetzt."
+  remove:
+    none-self: "&cDu hast aktuell keinen Präfix gesetzt."
+    success-self: "&aDein Präfix wurde erfolgreich entfernt."
+    none-other: "&c{player} &chat keinen Präfix gesetzt."
+    success-sender: "&aDer Präfix von &e{player} &awurde erfolgreich entfernt."
+    success-target: "&cDein Präfix wurde von &e{sender} &centfernt."
+    inherited: "&cDieser Präfix stammt von deinem Rang und kann nicht als Spielerpräfix entfernt werden. Nutze /rank."
+    inherited-other: "&cDer Präfix von &e{player} &cstammt vom Rang und kann nicht als Spielerpräfix entfernt werden."
+  set:
+    usage-header: "&cVerwendung:"
+    usage-self: "&8» &e/{label} <Präfix> &7(für dich selbst)"
+    usage-other: "&8» &e/{label} <Spieler> <Präfix> &7(für andere Spieler)"
+    usage-console: "&cVerwendung: &e/{label} <Spieler> <Präfix>"
+    blocked-staff-title: "&cDu darfst geschützte Team-Titel wie &e'{title}' &cnicht im Präfix verwenden! &7(backbone.prefix.admin)"
+    success-self: "&aDein Präfix wurde auf &r{formatted_prefix} &7(&e{raw_prefix}&7) gesetzt."
+    success-sender: "&aDer Präfix von &e{player} &awurde auf &r{formatted_prefix} &7(&e{raw_prefix}&7) gesetzt."
+    success-target: "&aDein Präfix wurde von &e{sender} &aauf &r{formatted_prefix} &7(&e{raw_prefix}&7) gesetzt."
+  suggestions:
+    player:
+      - "&b[VIP]"
+      - "&a[Spieler]"
+      - "&7[Gast]"
+      - "&#FFAA00[Premium]"
+      - "&d[Pro]"
+      - "&e[Legende]"
+    admin:
+      - "&c[Admin]"
+      - "&4[Owner]"
+      - "&9[Dev]"
+      - "&e[Mod]"
+      - "&#FF5555[Host]"
+
+punish:
+  ban:
+    usage: "&cVerwendung: &e/{label} <Spieler> [Zeit] [Grund]"
+    duration-zero: "&cDie Dauer darf nicht 0 sein! Nutze eine Dauer > 0 oder lass die Zeitangabe für einen permanenten Bann weg."
+    examples-header: "&7Beispiele:"
+    example-1: "&8» &e/{label} Spieler 15m Hacking"
+    example-2: "&8» &e/{label} Spieler 1d Beleidigung"
+    example-3: "&8» &e/{label} Spieler Schwerer Verstoß &7(Permanent)"
+    self-error: "&cDu kannst dich nicht selbst bannen!"
+    success: "&a{player} &7wurde für &e{duration} &7gebannt. &7Grund: &e{reason}"
+    reasons:
+      - "Hacking"
+      - "Cheating"
+      - "Killaura"
+      - "FlyHack"
+      - "SpeedHack"
+      - "X-Ray"
+      - "Griefing"
+      - "Trolling"
+      - "Schwere_Beleidigung"
+      - "Beleidigung"
+      - "Rassismus"
+      - "Diskriminierung"
+      - "Drohung"
+      - "Doxing"
+      - "Fremdwerbung"
+      - "Werbung"
+      - "Echtgeldhandel"
+      - "Bugusing"
+      - "Bannumgehung"
+      - "Spam"
+      - "Regelverstoß"
+      - "Unangebrachtes_Verhalten"
+  unban:
+    usage: "&cVerwendung: &e/{label} <Spieler>"
+    not-banned: "&cDieser Spieler ist momentan nicht gebannt."
+    target: "&aDein Bann wurde von &e{sender} &aaufgehoben."
+    success: "&aDer Bann von &e{player} &awurde erfolgreich aufgehoben."
+  mute:
+    usage: "&cVerwendung: &e/{label} <Spieler> [Zeit] [Grund]"
+    duration-zero: "&cDie Dauer darf nicht 0 sein! Nutze eine Dauer > 0 oder lass die Zeitangabe für einen permanenten Mute weg."
+    examples-header: "&7Beispiele:"
+    example-1: "&8» &e/{label} Spieler 15m Spam"
+    example-2: "&8» &e/{label} Spieler 2h Beleidigung"
+    example-3: "&8» &e/{label} Spieler Schwerer Verstoß &7(Permanent)"
+    self-error: "&cDu kannst dich nicht selbst muten!"
+    success: "&a{player} &7wurde für &e{duration} &7gemutet. &7Grund: &e{reason}"
+    reasons:
+      - "Spam"
+      - "Beleidigung"
+      - "Schwere_Beleidigung"
+      - "Fremdwerbung"
+      - "Werbung"
+      - "Provokation"
+      - "Trolling"
+      - "Caps-Lock"
+      - "Rassismus"
+      - "Diskriminierung"
+      - "Drohung"
+      - "Belästigung"
+      - "Betteln"
+      - "Unangebrachtes_Verhalten"
+      - "Chatvergehen"
+  unmute:
+    usage: "&cVerwendung: &e/{label} <Spieler>"
+    not-muted: "&cDieser Spieler ist momentan nicht gemutet."
+    target: "&aDein Mute wurde von &e{sender} &aaufgehoben. Du kannst wieder schreiben!"
+    success: "&aDer Mute von &e{player} &awurde erfolgreich aufgehoben."
+  status:
+    not-banned: "Nicht gebannt"
+    not-muted: "Nicht gemutet"
+  history:
+    unban: "Bann aufgehoben"
+    unmute: "Mute aufgehoben"
+  warn:
+    usage: "&cVerwendung: &e/{label} <Spieler> <Grund>"
+    self-error: "&cDu kannst dich nicht selbst verwarnen!"
+    received: "&cDu wurdest von &e{operator} &cverwarnt! &7Grund: &e{reason}"
+    success: "&aDer Spieler &e{player} &awurde verwarnt. &7Grund: &e{reason}"
+  warns:
+    usage: "&cVerwendung: &e/{label} <Spieler>"
+    empty: "&aDer Spieler &e{player} &ahat keine Verwarnungen."
+    header: "&7Verwarnungen fÃ¼r &e{player} &8(&e{count}&8):"
+    entry: "&8[&e#{index}&8] &7{date} von &e{by}&7: &f{reason}"
+  kick:
+    usage: "&cVerwendung: &e/{label} <Spieler> [Grund]"
+    self-error: "&cDu kannst dich nicht selbst kicken!"
+    screen: "&cDu wurdest vom Server gekickt!\n&7Von: &e{operator}\n&7Grund: &e{reason}"
+    success: "&aDer Spieler &e{player} &awurde gekickt. &7Grund: &e{reason}"
+
+automod:
+  messages:
+    automod:
+      warn: "{automod_prefix} &rVerwarnung: Diese Nachricht wurde von AutoMod markiert. &7Grund: &e{reason}"
+      mute: "{automod_prefix} &cDu wurdest aufgrund wiederholter Verstöße für {until} gemutet! &7Grund: &e{reason}"
+      kick: "{automod_prefix}\n&cDu wurdest vom AutoMod gekickt!\n&7Grund: &e{reason}"
+      ban: "{automod_prefix}\n\n&c&lDu wurdest vom Server gebannt!\n\n&7Grund: &e{reason}\n&7Verbleibende Zeit: &c{until}"
+    manual:
+      warn: "&cDu wurdest von &e{operator} &cverwarnt! &7Grund: &e{reason}"
+      mute: "&cDu wurdest von &e{operator} &cfür {until} gemutet! &7Grund: &e{reason}"
+      kick: "&cDu wurdest von &e{operator} &cgekickt!\n&7Grund: &e{reason}"
+      ban: "&c&lDu wurdest vom Server gebannt!\n\n&7Grund: &e{reason}\n&7Gebannt von: &e{operator}\n&7Verbleibende Zeit: &c{until}"
+    chat-muted: "{automod_prefix} &cDu bist momentan gemuted. &7({until})"
+  chat-muted-cmd: "&cDu bist momentan gemutet und kannst diesen Befehl nicht nutzen! &7({until})"
+  reason:
+    mute-threshold: "AutoMod: Strike-Schwelle erreicht ({strikes} Strikes) | {reason}"
+    ban-threshold: "Zu viele Verstöße ({strikes} Strikes) | {reason}"
+  review:
+    disabled: "AutoMod/Chat-Scan deaktiviert"
+    empty: "Keine Auffälligkeiten (leere Nachricht)"
+    clean: "Unauffällig"
+  filter:
+    word:
+      direct: "Verbotenes Wort erkannt: '{word}'"
+      obfuscated: "Verschleiertes verbotenes Wort erkannt: '{word}'"
+      typo: "Verbotenes Wort (Tippfehler-Bypass '{token}' -> '{word}')"
+    ad:
+      discord: "Unerlaubte Discord-Einladung"
+      domain: "Unerlaubte Domain / Link"
+      ip: "Unerlaubte Server-IP"
+    spam:
+      flood: "Zeichen-Spam (Flooding)"
+      caps: "Übermäßige Großschreibung ({percent}% Caps)"
+
+rank:
+  help:
+    header: "&8&m----------------&r &9[Backbone Ränge] &8&m----------------"
+    list: "&8» &e/{label} list &7- Zeigt alle Ränge an"
+    info: "&8» &e/{label} info [rang|spieler] &7- Zeigt Details an"
+    set: "&8» &e/setrank <spieler> <rang> &7- Weist einem Spieler einen Rang zu"
+    setdefault: "&8» &e/{label} setdefault <rang> &7- Legt den Standard-Rang fest"
+    create: "&8» &e/{label} create <name> <farbe> [dauer] [präfix] &7- Erstellt einen Rang"
+    delete: "&8» &e/{label} delete <rang> &7- Löscht einen Rang"
+    setduration: "&8» &e/{label} setduration <rang> <dauer|perm> &7- Ändert die Standarddauer"
+    setprev: "&8» &e/{label} setprev <rang> <vorheriger|none> &7- Setzt Vorgänger in Rang-Kette"
+    setnext: "&8» &e/{label} setnext <rang> <nächster|none> &7- Setzt Nachfolger in Rang-Kette"
+    promote: "&8» &e/{label} promote <spieler> [dauer] &7- Befördert Spieler zum nächsten Rang"
+    demote: "&8» &e/{label} demote <spieler> [dauer] &7- Degradiert Spieler zum vorherigen Rang"
+    offer: "&8» &e/{label} offer add|remove|list|clear <rang> ... &7- Verwaltet Kaufangebote"
+    perm-add: "&8» &e/{label} perm add <rang> <permission> &7- Fügt eine Berechtigung hinzu"
+    perm-remove: "&8» &e/{label} perm remove <rang> <permission> &7- Entfernt eine Berechtigung"
+    perm-world: "&8» &e/{label} perm add|remove <rang> <permission> [welt...] &7- Verwaltet Berechtigungen (optional pro Welt)"
+    player-addperm: "&8» &e/{label} player <spieler> addperm <permission> [welt...] &7- Weist einem Spieler ein Recht zu"
+    player-removeperm: "&8» &e/{label} player <spieler> removeperm <permission> [welt...] &7- Entfernt ein Spieler-Recht"
+    player-perms: "&8» &e/{label} player <spieler> perms &7- Zeigt individuelle Rechte an"
+    player-reset: "&8» &e/{label} player <spieler> reset [all] &7- Setzt Einzelrechte (oder alles) zurück"
+    buy: "&8» &e/{label} buy [rang] &7- Kauft einen Rang für Ingame-Geld"
+    setprice: "&8» &e/{label} setprice <rang> <preis|off> &7- Setzt den Kaufpreis eines Rangs"
+    shop-toggle: "&8» &e/{label} shop enable|disable &7- Rang-Kauf an/ausschalten"
+    setname: "&8» &e/{label} setname <rang> <neuer_name> &7- Ändert den Rangnamen (nur Text/Zahlen)"
+    setcolor: "&8» &e/{label} setcolor <rang> <farbe> &7- Ändert die Rang-Farbe (&0-&f)"
+    setprefix: "&8» &e/{label} setprefix <rang> <präfix> &7- Ändert den Rang-Präfix"
+    toggle: "&8» &e/{label} enable &7/ &e/{label} disable &7- Rangsystem an/ausschalten"
+    disabled-notice: "&6Hinweis: Das Rangsystem ist aktuell deaktiviert (&eranks.enabled: false&6)."
+    footer: "&8&m--------------------------------------------------"
+  list:
+    empty: "&7Es sind aktuell noch keine Ränge definiert."
+    empty-hint: "&7Erstelle deinen ersten Rang mit: &e/rank create <name> <farbe> [dauer] [präfix]"
+    header: "&8&m----------------&r &9[Ränge ({count})] &8&m----------------"
+    no-prefix: "&7(kein Präfix)"
+    default-badge: " &a[Standard]"
+    price-badge: " &8[&e{price}&8]"
+    entry-details: "   &7Präfix: &r{prefix} &8| &7Farbe: {color}{color_code} &8| &7Permissions: &e{perms}"
+  info:
+    usage: "&cVerwendung: &e/rank info <rang|spieler>"
+    not-found: "&cKein Rang oder Spieler mit dem Namen '&e{target}&c' gefunden!"
+    rank:
+      header: "&8&m----------------&r &9[Rang-Info: {color}{name}&9] &8&m----------------"
+
+      name: "&7Name: &r{color}{name}"
+      color: "&7Farbe: {color}{color_code} &7(nur Einzelfarbe)"
+      prefix: "&7Präfix: &r{prefix}"
+      no-prefix: "&7(keiner)"
+      default: "&7Standard-Rang: {is_default}"
+      default-duration: "&7Standarddauer: &e{duration}"
+      chain: "&7Rang-Kette: &7Vorgänger: &e{prev} &8| &7Nachfolger: &e{next}"
+      created: "&7Erstellt am: &e{date}"
+      last-change: "&7Zuletzt geändert: &e{date}"
+      permissions-header: "&7Berechtigungen (&e{count}&7):"
+      permissions-none: "  &8(keine Berechtigungen hinterlegt)"
+      offers-header: "&7Kaufangebote (&e{count}&7):"
+      price: "&7Kaufpreis: &e{price}"
+      price-not-for-sale: "&7(steht nicht zum Verkauf)"
+      world-permissions-header: "&7Welt-Berechtigungen in &b{world}&7 (&e{count}&7):"
+      world-permissions-none: "  &8(keine welt-spezifischen Berechtigungen hinterlegt)"
+    player:
+      header: "&8&m----------------&r &9[Spieler-Rang: &e{player}&9] &8&m----------------"
+      uuid: "&7UUID: &8{uuid}"
+      current-rank: "&7Aktueller Rang: {color}{name}"
+      source: "&7Rang-Quelle: {source}"
+      source-assigned: "&aIndividuell zugewiesen"
+      source-default: "&7Standard-Rang"
+      validity: "&7Gültigkeit: &a{validity}"
+      expires: "&7Läuft ab am: &e{date} &8(&7in &e{remaining}&8)"
+      fallback: "&7Fallback-Rang bei Ablauf: &e{rank}"
+      effective-perms: "&7Effektive Berechtigungen (&e{count}&7):"
+      no-rank: "&7Aktueller Rang: &cKein Rang zugewiesen (und kein Standard-Rang aktiv)"
+      individual-perms: "&7Individuelle Einzelrechte (&e{count}&7):"
+      individual-world-perms: "&7Individuelle Welt-Rechte in &b{world}&7 (&e{count}&7):"
+      individual-none: "  &8(keine individuellen Berechtigungen vorhanden)"
+      purchase-info: "&7Gekauft am: &e{date} &7für &e{price}"
+  set:
+    usage: "&cVerwendung: &e/setrank <spieler> <rang> [dauer]"
+    success-sender: "&aDem Spieler &e{player} &awurde der Rang {color}{name} &a{duration} zugewiesen!"
+    success-target: "&aDein Rang wurde auf {color}{name} &a{duration} geändert!"
+    invalid-duration: "&cUngültige Zeitangabe! Erlaubt sind z.B. 30d, 12h, 1mo oder 'perm'."
+    duration-suffix: "&8(&7für &e{duration}&8)"
+  not-exists: "&cDer Rang '&e{rank}&c' existiert nicht!"
+  available-ranks: "&7Verfügbare Ränge: &e{ranks}"
+  setdefault:
+    usage: "&cVerwendung: &e/rank setdefault <rang>"
+    success: "&aDer Standard-Rang wurde erfolgreich auf {color}{name} &agesetzt!"
+  create:
+    usage: "&cVerwendung: &e/rank create <name> <farbe> [dauer] [präfix]"
+    hint-name: "&7Name: Nur Buchstaben und Zahlen (keine Sonderzeichen oder Farbcodes)!"
+    hint-color: "&7Farbe: Genau ein Farbcode (z.B. &e&4&7, &e&c&7, &e&6&7). Keine Fettung (&l)!"
+    success: "&aRang {color}{name} &8(&7Dauer: &e{duration}&8) &aerfolgreich erstellt!"
+    auto-default: "&eDieser Rang wurde automatisch als Standard-Rang festgelegt."
+  error: "&cFehler: {error}"
+  delete:
+    usage: "&cVerwendung: &e/rank delete <rang>"
+    success: "&aDer Rang '&e{name}&a' wurde erfolgreich gelöscht."
+    failed: "&cDer Rang konnte nicht gelöscht werden."
+  perm:
+    usage-header: "&cVerwendung:"
+    usage-add: "&8» &e/rank perm add <rang> <permission>"
+    usage-remove: "&8» &e/rank perm remove <rang> <permission>"
+    added: "&aBerechtigung &e{permission} &awurde dem Rang {color}{name} &ahinzugefügt!"
+    already-exists: "&cDer Rang besitzt diese Berechtigung bereits!"
+    removed: "&aBerechtigung &e{permission} &awurde vom Rang {color}{name} &aentfernt!"
+    not-found: "&cDer Rang besitzt diese Berechtigung nicht!"
+    added-world: "&aBerechtigung &e{permission} &awurde dem Rang {color}{name} &ain der Welt &b{world}&a hinzugefügt!"
+    already-exists-world: "&cDer Rang besitzt diese Berechtigung in der Welt &b{world}&c bereits!"
+    removed-world: "&aBerechtigung &e{permission} &awurde vom Rang {color}{name} &ain der Welt &b{world}&a entfernt!"
+    not-found-world: "&cDer Rang besitzt diese Berechtigung in der Welt &b{world}&c nicht!"
+    unknown-action: "&cUnbekannte Aktion: &e{action} &7(Erlaubt: add, remove)"
+  player:
+    usage-header: "&cVerwendung:"
+    usage-add: "&8» &e/rank player <spieler> addperm <permission> [welt...]"
+    usage-remove: "&8» &e/rank player <spieler> removeperm <permission> [welt...]"
+    usage-perms: "&8» &e/rank player <spieler> perms"
+    usage-reset: "&8» &e/rank player <spieler> reset [all]"
+    added: "&aBerechtigung &e{permission} &awurde dem Spieler &e{player} &a{scope} hinzugefügt!"
+    already-exists: "&cDer Spieler besitzt diese Berechtigung {scope} bereits!"
+    removed: "&aBerechtigung &e{permission} &awurde von Spieler &e{player} &a{scope} entfernt!"
+    not-found: "&cDer Spieler besitzt diese Berechtigung {scope} nicht!"
+    reset-perms-success: "&aAlle individuellen Berechtigungen von Spieler &e{player} &awurden zurückgesetzt!"
+    reset-all-success: "&aAlle individuellen Berechtigungen und die Rang-Zuweisung von &e{player} &awurden zurückgesetzt!"
+    invalid-world: "&cDie Welt '&e{world}&c' ist ungültig oder nicht geladen!"
+    world-not-loaded-hint: "&eHinweis: Die Welt '&e{world}&e' ist aktuell nicht auf dem Server geladen."
+    scope-global: "global"
+    scope-world: "in der Welt &b{world}"
+    scope-worlds: "in den Welten &b{worlds}"
+    perms-header: "&8&m----------------&r &9[Rechte von &e{player}&9] &8&m----------------"
+    perms-global-header: "&7Globale Einzelrechte (&e{count}&7):"
+    perms-world-header: "&7Welt-Rechte in &b{world}&7 (&e{count}&7):"
+    perms-none: "  &8(keine individuellen Berechtigungen vorhanden)"
+  buy:
+    disabled: "&cDer Rang-Kauf ist aktuell deaktiviert!"
+    ranks-disabled: "&cDas Rang-System ist aktuell deaktiviert!"
+    no-economy: "&cKein aktives Economy-System gefunden! Rang-Kauf ist nicht möglich."
+    header: "&8&m----------------&r &9[Käufliche Ränge] &8&m----------------"
+    your-balance: "&7Dein Kontostand: &e{balance}"
+    entry: "&8» {color}{name} &8- &e{price} &8| &a[Kaufen]"
+    entry-hover: "&aKlicke, um {name} für {price} zu kaufen"
+    none-available: "&7Aktuell stehen keine Ränge zum Verkauf."
+    confirm-prompt: "&7Möchtest du den Rang {color}{name} &7für &e{price} &7kaufen?"
+    btn-confirm: "&a&l[Bestätigen]"
+    btn-confirm-hover: "&aKlicke hier, um den Kauf unwiderruflich abzuschließen"
+    success: "&aGlückwunsch! Du hast erfolgreich den Rang {color}{name} &afür &e{price} &agekauft!"
+    already-owned: "&cDu besitzt diesen Rang oder einen höherwertigen Rang bereits!"
+    already-owned-permanent: "&cDu besitzt diesen Rang bereits permanent!"
+    cannot-downgrade: "&cDu kannst diesen Rang nicht kaufen, da du bereits diesen oder einen höherwertigen Rang in der Kette besitzt!"
+    invalid-offer: "&cUngültige Angebots-Nummer!"
+    offer-entry: "  &8[&e{idx}&8] &a{price} &8(&e{duration}&8) &8» &e/rank buy {name} {idx}"
+    confirm-prompt-offer: "&7Möchtest du Angebot &e#{nr} &7für Rang {color}{name} &7kaufen? Preis: &e{price} &8| &7Dauer: &e{duration}"
+    extended-success: "&aGlückwunsch! Die Dauer deines Rangs {color}{name} &awurde erfolgreich um &e{duration} &averlängert! Neuer Kontostand: &e{balance}"
+    offers-header: "&8&m----------------&r &9[Kaufangebote für {color}{name}&9] &8&m----------------"
+    not-for-sale: "&cDer Rang '{rank}' steht nicht zum Verkauf!"
+    not-an-upgrade: "&cDu kannst diesen Rang nicht kaufen, da er kein Upgrade zu deinem aktuellen Rang darstellt!"
+    insufficient-funds: "&cDu hast nicht genug Geld! Benötigt: &e{price}&c, Vorhanden: &e{balance}&c."
+    transaction-failed: "&cDie Transaktion ist fehlgeschlagen. Es wurde kein Geld abgebucht!"
+    assignment-failed: "&cFehler beim Zuweisen des Rangs! Das Geld wurde zurückerstattet."
+  setprice:
+    usage: "&cVerwendung: &e/rank setprice <rang> <preis|off>"
+    success: "&aDer Kaufpreis für Rang {color}{name} &awurde auf &e{price} &agesetzt!"
+    removed: "&aDer Rang {color}{name} &asteht nun nicht mehr zum Verkauf."
+    invalid-price: "&cUngültiger Preis! Bitte gib eine positive Zahl oder 'off' ein."
+  shop:
+    usage: "&cVerwendung: &e/rank shop <enable|disable>"
+    enabled: "&aDer Rang-Kauf (/rank buy) wurde &eaktiviert&a!"
+    disabled: "&cDer Rang-Kauf (/rank buy) wurde &edeaktiviert&c!"
+  setname:
+    usage: "&cVerwendung: &e/rank setname <rang> <neuer_name>"
+    hint: "&7Rangnamen dürfen keine Sonderzeichen oder Farbcodes enthalten (nur Buchstaben und Zahlen)!"
+    success: "&aDer Name für Rang &e{old_name} &awurde auf &e{name} &ageändert!"
+  setcolor:
+    usage: "&cVerwendung: &e/rank setcolor <rang> <farbe>"
+    hint: "&7Farbe: Genau ein Farbcode (z.B. &e&4&7, &e&c&7). Keine Fettung (&l)!"
+    success: "&aDie Farbe für Rang &e{name} &awurde auf {color}{color_code} &ageändert!"
+  setprefix:
+    usage: "&cVerwendung: &e/rank setprefix <rang> <präfix>"
+    success: "&aDer Präfix für Rang &e{name} &awurde auf &r{prefix} &ageändert!"
+  setduration:
+    usage: "&cVerwendung: &e/rank setduration <rang> <dauer|perm>"
+    success: "&aDie Standarddauer für Rang {color}{name} &awurde auf &e{duration} &ageändert!"
+    invalid-duration: "&cUngültiges Dauer-Format! Erlaubt sind z.B. 30d, 12h, 1mo oder 'perm'."
+  setprev:
+    usage: "&cVerwendung: &e/rank setprev <rang> <vorheriger|none>"
+    success: "&aDer Vorgänger für Rang &e{name} &awurde auf &e{prev} &agesetzt!"
+  setnext:
+    usage: "&cVerwendung: &e/rank setnext <rang> <nächster|none>"
+    success: "&aDer Nachfolger für Rang &e{name} &awurde auf &e{next} &agesetzt!"
+  chain:
+    none: "Keiner"
+  promote:
+    usage: "&cVerwendung: &e/rank promote <spieler> [dauer]"
+    no-next: "&cDer Rang '&e{name}&c' hat keinen nächsten Rang in der Rang-Kette!"
+    success: "&aDer Spieler &e{player} &awurde erfolgreich auf den Rang {color}{name} &abefördert!"
+  demote:
+    usage: "&cVerwendung: &e/rank demote <spieler> [dauer]"
+    no-prev: "&cDer Rang '&e{name}&c' hat keinen vorherigen Rang in der Rang-Kette!"
+    success: "&aDer Spieler &e{player} &awurde erfolgreich auf den Rang {color}{name} &adegradiert!"
+  offer:
+    usage: "&cVerwendung: &e/rank offer <add|remove|list|clear> <rang> ..."
+    usage-add: "&cVerwendung: &e/rank offer add <rang> <preis> [dauer]"
+    usage-remove: "&cVerwendung: &e/rank offer remove <rang> <nummer>"
+    invalid-number: "&cUngültige Angebots-Nummer!"
+    invalid-price: "&cBitte gib eine gültige Zahl an!"
+    added: "&aAngebot für Rang &e{name} &ahinzugefügt: &e{offer}"
+    removed: "&aAngebot &e#{nr} &afür Rang &e{name} &awurde entfernt!"
+    cleared: "&aAlle Angebote für Rang &e{name} &awurden gelöscht!"
+    list-header: "&8&m----------------&r &9[Angebote für &e{name}&9] &8&m----------------"
+    list-empty: "  &8(keine Kaufangebote hinterlegt)"
+  expired-notify: "&cDein temporärer Rang '&e{rank}&c' ist abgelaufen! Dein Rang ist nun: &e{current}"
+  toggle:
+    enabled: "&aDas Rangsystem wurde &eaktiviert&a! Berechtigungen werden nun vergeben."
+    disabled: "&cDas Rangsystem wurde &edeaktiviert&c! Alle Rang-Berechtigungen wurden entfernt."
+  validation:
+    invalid-id: "Ungültiger Rangname! Erlaubt sind nur a-z, 0-9, Umlaute, '_' und '-' (keine Leerzeichen oder Farbcodes)."
+    already-exists: "Ein Rang mit dem Namen '{name}' existiert bereits!"
+    invalid-name: "Ungültiger Rangname! Erlaubt sind nur a-z, 0-9, Umlaute, '_' und '-' (keine Leerzeichen oder Farbcodes)."
+    invalid-color: "Ungültige Farbe! Es ist exakt ein Farbcode erlaubt (z.B. &4, &6, §c). Formatierungen wie &l (Dick) sind nicht gestattet."
+
+scoreboard:
+  usage-console: "&cVerwendung: &e/{label} [reload|list|show|hide]"
+  usage: "&7Verwendung: &e/{label} [on|off|toggle|reload|list|show|hide]"
+  enabled: "&7Scoreboard: &aAktiviert&7."
+  disabled: "&7Scoreboard: &cDeaktiviert&7."
+  world-toggle-disabled: "&cIn dieser Welt darf das Scoreboard nicht deaktiviert werden!"
+  reload-success: "&aAlle Scoreboard-Dateien und Konfigurationen wurden erfolgreich neu geladen!"
+  show:
+    usage: "&cVerwendung: &e/{label} show <Spieler>"
+    sender: "&aScoreboard für &e{player} &aaktiviert."
+    target: "&7Dein Scoreboard wurde von einem Administrator &aaktiviert&7."
+  hide:
+    usage: "&cVerwendung: &e/{label} hide <Spieler>"
+    sender: "&cScoreboard für &e{player} &cdeaktiviert."
+    target: "&7Dein Scoreboard wurde von einem Administrator &cdeaktiviert&7."
+  list:
+    header: "&8&m--------&r &9&lGeladene Scoreboards &8&m--------"
+    entry: "&8» &e{id} &7({name}&7): {status} &8| &7Prio: &e{priority} &8| &7Welten: &b{worlds}"
+    footer: "&8&m--------------------------------------"
+  placeholder:
+    mute-none: "Keine"
+
+home:
+  del:
+    usage: "&cVerwendung: &e/{label} <Name>"
+    success: "&aHome &e{home} &awurde erfolgreich gelöscht."
+  not-found: "&cDu hast kein Home namens '&e{home}&c'!"
+  empty: "&7Du hast noch kein Home gesetzt. Verwende &e/sethome &7zum Erstellen."
+  world-unavailable: "&cDie Welt dieses Homes ist aktuell nicht verfügbar!"
+  teleported: "&7Du wurdest zu deinem Home &e{home} &7teleportiert."
+  blacklist:
+    usage: "&cBitte gib eine Welt an: &e/home blacklistworld <Weltname>"
+    added: "&7Die Welt &e{world} &cwurde zu den gesperrten Home-Welten hinzugefügt."
+    removed: "&7Die Welt &e{world} &awurde von den gesperrten Home-Welten entfernt."
+  list:
+    header: "&8&m----------------&r &9&lDeine Homes &8&m----------------"
+    prefix: "&8» &7Homes: "
+    hover: "&aKlicke hier, um zu &e{home} &azu teleportieren!"
+    footer: "&8&m---------------------------------------------"
+  set:
+    world-blacklisted: "&cIn dieser Welt dürfen keine Homes gesetzt werden! &7({world} ist gesperrt)"
+    reserved-name: "&cDer Name '&e{home}&c' ist reserviert und kann nicht als Home verwendet werden!"
+    limit-reached: "&cDu hast das maximale Limit von &e{limit} &cHomes erreicht!"
+    success: "&aHome &e{home} &awurde erfolgreich an deiner Position gesetzt!"
+
+warp:
+  del:
+    usage: "&cVerwendung: &e/{label} <Name>"
+    success: "&aWarp &e{warp} &awurde erfolgreich gelöscht."
+  not-found: "&cDer Warp '&e{warp}&c' existiert nicht!"
+  not-found-tip: "&7Tipp: Verwende &e/warps &7für eine Übersicht."
+  teleported: "&7Du wurdest zu Warp &e{warp} &7teleportiert."
+  blacklist:
+    usage: "&cBitte gib eine Welt an: &e/warp blacklistworld <Weltname>"
+    added: "&7Die Welt &e{world} &cwurde zu den gesperrten Warp-Welten hinzugefügt."
+    removed: "&7Die Welt &e{world} &awurde von den gesperrten Warp-Welten entfernt."
+  list:
+    empty: "&7Es sind aktuell noch keine Warps eingerichtet."
+    header: "&8&m----------------&r &9&lVerfügbare Warps &8&m----------------"
+    prefix: "&8» &7Warps: "
+    hover: "&aKlicke hier, um zu &e{warp} &azu teleportieren!"
+    footer: "&8&m---------------------------------------------"
+  set:
+    usage: "&cVerwendung: &e/{label} <Name>"
+    world-blacklisted: "&cIn dieser Welt dürfen keine Warps erstellt werden! &7({world} ist gesperrt)"
+    reserved-name: "&cDer Name '&e{warp}&c' ist reserviert und kann nicht als Warp verwendet werden!"
+    success: "&aWarp &e{warp} &awurde erfolgreich an deiner Position erstellt!"
+
+lobby:
+  not-set: "&cEs wurde noch keine Lobby gesetzt! Ein Administrator kann dies mit &e/setlobby &ctun."
+  teleported: "&7Du wurdest zur &eLobby &7teleportiert."
+  set:
+    success-with-toggle: "&aLobby erfolgreich gesetzt! &7(Teleport beim Serverbeitritt: {state}&7)"
+    success: "&aLobby-Position erfolgreich auf deine aktuelle Position gesetzt!"
+
+spawn:
+  teleported: "&7Du wurdest zum &eSpawn &7teleportiert."
+  set:
+    success-with-toggle: "&aWorldspawn für Welt &e{world} &aerfolgreich gesetzt! &7(Auto-Teleport beim Betreten der Welt: {state}&7)"
+    success: "&aWorldspawn für Welt &e{world} &aerfolgreich gesetzt!"
+
+tpa:
+  usage: "&cVerwendung: &e/{label} <Spieler|accept|deny>"
+  self-error: "&cDu kannst dich nicht zu dir selbst teleportieren!"
+  sent: "&7Teleport-Anfrage an &e{player} &7gesendet. &8(Läuft in 60s ab)"
+  request:
+    header: "&8&m----------------&r &9&lTeleport-Anfrage &8&m----------------"
+    line1: "&e{player} &7möchte sich zu dir teleportieren!"
+    line2: "&7Diese Anfrage ist für &e60 Sekunden &7gültig."
+    accept-btn: "&a&l[✔ ANNEHMEN]"
+    accept-hover: "&aKlicke hier, um die Anfrage anzunehmen (/tpa accept)"
+    deny-btn: "&c&l[✖ ABLEHNEN]"
+    deny-hover: "&cKlicke hier, um die Anfrage abzulehnen (/tpa deny)"
+    footer: "&8&m---------------------------------------------"
+  no-pending: "&cDu hast keine offenen Teleport-Anfragen."
+  requester-offline: "&cDer anfragende Spieler ist nicht mehr online."
+  accepted-target: "&aDu hast die Teleport-Anfrage von &e{player} &aangenommen."
+  accepted-requester: "&e{player} &ahat deine Teleport-Anfrage angenommen! Du wirst teleportiert..."
+  denied-target: "&cDu hast die Teleport-Anfrage von &e{player} &cabgelehnt."
+  denied-requester: "&e{player} &chat deine Teleport-Anfrage abgelehnt."
+
+time:
+  type:
+    day: "Tag"
+    night: "Nacht"
+    sunrise: "Sonnenaufgang"
+    sunset: "Sonnenuntergang"
+  set-world: "&7Die Zeit wurde auf &e{time} &7gestellt."
+  set-all: "&7Die Zeit in allen Welten wurde auf &e{time} &7gestellt."
+  invalid-world: "&cIn dieser Welt kann die Zeit nicht geändert werden!"
+
+weather:
+  type:
+    sun: "Sonnig"
+    rain: "Regen"
+    storm: "Gewitter"
+  set-world: "&7Das Wetter wurde auf &e{weather} &7gestellt."
+  set-all: "&7Das Wetter in allen Welten wurde auf &e{weather} &7gestellt."
+
+setup:
+  tab-chapters:
+    - "Sprache"
+    - "Scoreboard"
+    - "Ränge"
+    - "Automod"
+    - "Befehle"
+    - "Economy"
+    - "Teleportation"
+    - "MotD"
+    - "Nachrichten"
+    - "Compating"
+    - "ignore"
+  divider: "&8&m-----------------------------------------------------"
+  started-banner: "&8&m------------&r &9&lBackbone Setup Wizard &8&m------------\n&7Der öffentliche Chat ist für dich während des Setups pausiert.\n&7Schreibe jederzeit &c&lStop &7in den Chat, um das Setup zu beenden."
+  stop-footer: "&8(&7Schreibe jederzeit &cStop &7in den Chat, um den Setup-Wizard zu beenden&8)"
+  stopped: "&cDer Backbone Setup-Wizard wurde beendet. Dein Chat ist wieder aktiv!"
+  ignored: "&aDer Erststart-Setup-Hinweis wurde deaktiviert. Du kannst das Setup jederzeit mit &e/backbone setup &astarten."
+  not-active: "&cDu befindest dich aktuell nicht im Setup-Wizard. Starte ihn mit &e/backbone setup&c."
+  already-running: "&cEin anderer Administrator führt den Setup-Wizard bereits aus!"
+  unknown-chapter: "&cUnbekanntes Setup-Kapitel: &e{chapter}&c. &7Verfügbar: &eSprache, Scoreboard, Ränge, Automod, Befehle, Economy, Teleportation, MotD, Nachrichten, Compating, ignore"
+  op-reminder:
+    header: "&8&m----------------&r &9&lBackbone Setup &8&m----------------"
+    line1: "&eBackbone wurde auf diesem Server noch nicht eingerichtet!"
+    line2: "&7Nutze &a/backbone setup &7für den Setup-Wizard oder &c/backbone setup ignore&7, um diesen Hinweis auszublenden."
+    btn-start: "&a&l[▶ /backbone setup starten]"
+    hover-start: "&aKlicke hier, um den Backbone Setup-Wizard zu starten"
+    btn-ignore: "&c&l[✖ /backbone setup ignore]"
+    hover-ignore: "&cKlicke hier, um diesen Hinweis dauerhaft zu ignorieren"
+    footer: "&8&m------------------------------------------------"
+  completed:
+    header: "&8&m------------&r &a&lSetup Abgeschlossen! &8&m------------"
+    line1: "&aAlle Backbone-Einstellungen wurden übernommen und gespeichert!"
+    line2: "&7Dein normaler Chat ist nun wieder aktiv. Du kannst einzelne Kapitel jederzeit über &e/backbone setup <Kapitel> &7anpassen."
+    footer: "&8&m----------------------------------------------"
+  common:
+    btn-yes: "&a&l[Ja]"
+    hover-yes: "&aKlicke für Ja"
+    btn-no: "&c&l[Nein]"
+    hover-no: "&cKlicke für Nein"
+    btn-next: "&f&l[Weiter]"
+    hover-next: "&fKlicke, um zum nächsten Schritt fortzufahren"
+    btn-skip: "&f&l[Überspringen]"
+    hover-skip: "&fKlicke, um diesen Schritt zu überspringen"
+    invalid-yes-no: "&cBitte klicke auf &a&l[Ja] &coder &c&l[Nein] &c(oder schreibe Ja/Nein in den Chat)."
+    click-next: "&7Bitte klicke auf &f&l[Weiter] &7oder schreibe &fWeiter &7in den Chat."
+    skipped: "&7Schritt übersprungen."
+  ch1_1:
+    title: "&9&lChapter 1.1 &8» &eGeneral Language"
+    question: "&7Please select the primary language for &9Backbone&7:"
+    hint: "&8(Click an option below or type &aEnglish&8, &aGerman&8, &aEnglisch&8, &aDeutsch &8or &cStop &8in chat)"
+    btn-english: "&a&l[English]"
+    hover-english: "&aSelect English"
+    btn-german: "&a&l[German]"
+    hover-german: "&aSelect German (Deutsch)"
+    saved-en: "&aLanguage set to &eEnglish&a!"
+    saved-de: "&aSprache wurde auf &eDeutsch &agesetzt!"
+    invalid: "&cPlease select &a&l[English] &cor &a&l[German] &c(or type English / German / Englisch / Deutsch)."
+  ch1_2:
+    title: "&9&lKapitel 1.2 &8» &eSprache der Standardwerte"
+    question: "&7Sollen die Konfigurationsdateien (Standard-MOTD, Join-/Leave-Nachrichten, AutoMod etc.) ebenfalls automatisch auf Deutsch übersetzt werden?"
+    saved-yes: "&aAlle Standardwerte in den Konfigurationsdateien wurden auf Deutsch übersetzt!"
+    saved-no: "&7Die Standardwerte der Konfigurationsdateien wurden unverändert gelassen."
+  ch2_1:
+    title: "&9&lKapitel 2.1 &8» &eNutzung des Scoreboards"
+    question: "&7Möchtest du das Scoreboard-System aktivieren oder deaktivieren (deaktiviert & unregistriert auch &e/sb &7bzw. &e/scoreboard&7)?"
+    saved-yes: "&aScoreboard-System aktiviert!"
+    saved-no: "&cScoreboard-System deaktiviert und Befehle unregistriert."
+  ch2_2:
+    title: "&9&lKapitel 2.1 &8» &eHinweise zu example.yml"
+    lines:
+      - "&7Unter &eplugins/Backbone/scoreboards/example.yml &7findest du eine fertige Vorlage."
+      - "&7Setze dort einfach &aenabled: true &7(oder erstelle eigene .yml Dateien) und führe &e/sb reload &7aus!"
+      - "&7Alle Platzhalter sowie &e<switch>&7, &e<if> &7und &e<center> &7sind direkt in der Datei kurz erklärt."
+  ch3_1:
+    title: "&9&lKapitel 3.1 &8» &eNutzung des Rang-Systems"
+    question: "&7Soll das Ränge-System genutzt oder deaktiviert werden (deaktiviert & unregistriert auch &e/rank&7, &e/ranks &7und &e/setrank&7)?"
+    saved-yes: "&aRänge-System aktiviert!"
+    saved-no: "&cRänge-System deaktiviert und Befehle unregistriert."
+  ch3_2_1:
+    title: "&9&lKapitel 3.2.1 &8» &eStandard-Rang erstellen: Name"
+    question: "&7Schreibe in den Chat, wie der &eStandard-Rang &7für Spieler heißen soll (ohne Farbcodes oder Sonderzeichen):"
+    hint: "&8(Beispiel: &7Spieler &8oder &7Mitglied&8)"
+    invalid: "&cUngültiger Name! Bitte verwende nur Buchstaben und Zahlen (keine Farbcodes oder Sonderzeichen)."
+    saved: "&aName für den Standard-Rang gesetzt: &e{name}"
+  ch3_2_2:
+    title: "&9&lKapitel 3.2.2 &8» &eStandard-Rang erstellen: Präfix"
+    question: "&7Gib nun den &ePräfix &7für den Standard-Rang &e{name} &7im Chat an (Farbcodes mit &e& &7erlaubt):"
+    hint: "&8(Beispiel: &7&7[Spieler] &8oder klicke auf Überspringen)"
+    saved: "&aPräfix für den Standard-Rang gesetzt: &r{prefix}"
+    skipped: "&7Kein Präfix für den Standard-Rang gesetzt."
+  ch3_2_3:
+    title: "&9&lKapitel 3.2.3 &8» &eStandard-Rang erstellen: Namensfarbe"
+    question: "&7Wähle die &eNamensfarbe &7für den Standard-Rang &e{name} &7aus:"
+    btn-white: "&f&l[Weiß]"
+    btn-blue: "&9&l[Blau]"
+    btn-red: "&c&l[Rot]"
+    btn-green: "&a&l[Grün]"
+    btn-yellow: "&e&l[Gelb]"
+    btn-purple: "&5&l[Lila]"
+    btn-black: "&8&l[Schwarz]"
+    hover-color: "&7Klicke, um die Farbe &e{code} &7auszuwählen"
+    invalid: "&cBitte klicke auf eine der Farben oder schreibe den Farbnamen in den Chat."
+    saved: "&aStandard-Rang {color}{name} &awurde erfolgreich erstellt!"
+  ch3_2_4:
+    title: "&9&lKapitel 3.2.4 &8» &eStandard-Rang: Hinweise"
+    lines:
+      - "&aDer erstellte Rang &e{rank} &7ist nun der Standard-Rang für alle Spieler!"
+      - "&7Du kannst diesem Rang jederzeit Berechtigungen hinzufügen mit:"
+      - "&8» &e/rank perm add {id} <permission>"
+      - "&7Und Berechtigungen wieder entfernen mit: &e/rank perm remove {id} <permission>"
+    lines-permissions:
+      - "&7Du kannst auch einzelnen Spielern individuelle Rechte vergeben mit:"
+      - "&8» &e/rank player <spieler> addperm <permission> [welt...]"
+      - "&7Oder Rängen welt-spezifische Rechte zuweisen:"
+      - "&8» &e/rank perm add <rang> <permission> [welt...]"
+  ch3_3:
+    title: "&9&lKapitel 3.3 &8» &eRang-Kauf (/rank buy)"
+    question: "&7Soll es Spielern möglich sein, sich Ränge mit Ingame-Geld zu kaufen (/rank buy)?"
+    saved-yes: "&aRang-Kauf (/rank buy) aktiviert!"
+    saved-no: "&cRang-Kauf (/rank buy) deaktiviert."
+  ch3_4:
+    title: "&9&lKapitel 3.4 &8» &eHinweise zum Rang-Kauf"
+    lines:
+      - "&7Preise für Ränge legst du fest mit: &e/rank setprice <rang> <preis>"
+      - "&7Beispiel: &e/rank setprice vip 5000"
+      - "&7Um den Verkauf eines Rangs zu beenden: &e/rank setprice <rang> off"
+      - "&7Spieler können kaufbare Ränge mit &e/rank buy &7ansehen und erwerben."
+  ch4_1:
+    title: "&9&lKapitel 4.1 &8» &eAutoMod Chat-Überwachung"
+    question: "&7Soll AutoMod aktiv den Chat überwachen?"
+    saved-yes: "&aAutoMod Chat-Überwachung aktiviert!"
+    saved-no: "&cAutoMod Chat-Überwachung deaktiviert."
+  ch4_2:
+    title: "&9&lKapitel 4.2 &8» &eHinweis zur AutoMod-Konfiguration"
+    lines:
+      - "&7In der Datei &eplugins/Backbone/automod/config.yml &7kannst du Filter (Domains, IPs, Discord) und Strike-Strafen anpassen."
+      - "&7Die blockierten Wörter kannst du in &eplugins/Backbone/automod/badwords.yml &7bearbeiten."
+  ch5_1:
+    title: "&9&lKapitel 5.1 &8» &eEssentials-Befehle"
+    question: "&7Möchtest du die Essentials-Befehle von Backbone nutzen (&aJa&7) oder sollen sie deaktiviert werden (&cNein&7)?"
+    hint: "&8(Umfasst /gamemode, /fly, /day, /night, /sun, /rain, /invsee, /ec, /tpa)"
+    saved-yes: "&aEssentials-Befehle aktiviert!"
+    saved-no: "&cEssentials-Befehle deaktiviert und unregistriert."
+  ch5_2:
+    title: "&9&lKapitel 5.2 &8» &ePrivate Nachrichten (/msg & /reply)"
+    question: "&7Sollen private Nachrichten (/msg und /reply) aktiviert werden?"
+    saved-yes: "&aPrivate Nachrichten (/msg & /reply) aktiviert!"
+    saved-no: "&cPrivate Nachrichten (/msg & /reply) deaktiviert und unregistriert."
+  ch6_1:
+    title: "&9&lKapitel 6.1 &8» &eEconomy-System"
+    question: "&7Soll das Economy-System von Backbone (&e/money&7, &e/pay&7) genutzt werden?"
+    saved-yes: "&aEconomy-System aktiviert!"
+    saved-no: "&cEconomy-System deaktiviert und Befehle unregistriert."
+    buy-warning: "&6Hinweis: Der Rang-Kauf (/rank buy) ist aktiv, aber ohne aktives Economy-System können keine Ränge gekauft werden!"
+  ch6_2:
+    title: "&9&lKapitel 6.2 &8» &eStartguthaben (Startbalance)"
+    question: "&7Gib im Chat an, wie viel Geld jeder Spieler standardmäßig zu Beginn hat (nur Zahlen) oder wähle ein Preset:"
+    hover-preset: "&aStartguthaben auf {amount} setzen"
+    invalid: "&cUngültige Eingabe! Bitte gib nur eine gültige Zahl ein (z.B. 1000)."
+    saved: "&aStartguthaben auf &e{amount} &agesetzt!"
+  ch6_3:
+    title: "&9&lKapitel 6.3 &8» &eWährungs-Symbol"
+    question: "&7Gib ein einzelnes Zeichen im Chat als Währungs-Symbol an oder wähle ein Preset:"
+    hover-preset: "&a{symbol} als Währungs-Symbol auswählen"
+    invalid: "&cBitte gib genau ein einzelnes Zeichen an (z.B. €, $, C)."
+    saved: "&aWährungs-Symbol auf &e{symbol} &agesetzt!"
+  ch7_1:
+    title: "&9&lKapitel 7.1 &8» &eTeleportation: Warp-System"
+    question: "&7Soll das Warp-System von Backbone (&e/warp&7, &e/warps&7, &e/setwarp&7, &e/delwarp&7) genutzt werden?"
+    saved-yes: "&aWarp-System aktiviert!"
+    saved-no: "&cWarp-System deaktiviert und Befehle unregistriert."
+  ch7_2:
+    title: "&9&lKapitel 7.2 &8» &eTeleportation: Home-System"
+    question: "&7Soll das Home-System von Backbone (&e/home&7, &e/homes&7, &e/sethome&7, &e/delhome&7) genutzt werden?"
+    saved-yes: "&aHome-System aktiviert!"
+    saved-no: "&cHome-System deaktiviert und Befehle unregistriert."
+  ch7_3:
+    title: "&9&lKapitel 7.3 &8» &eTeleportation: Lobby-System"
+    question: "&7Soll das Lobby-System von Backbone (&e/lobby&7, &e/setlobby&7) genutzt werden?"
+    saved-yes: "&aLobby-System aktiviert!"
+    saved-no: "&cLobby-System deaktiviert und Befehle unregistriert."
+  ch7_4:
+    title: "&9&lKapitel 7.4 &8» &eTeleportation: Lobby beim Beitritt"
+    question: "&7Sollen die Spieler beim Server-Beitritt automatisch zur Lobby teleportiert werden?"
+    saved-yes: "&aTeleport zur Lobby beim Beitritt aktiviert!"
+    saved-no: "&cTeleport zur Lobby beim Beitritt deaktiviert."
+  ch7_5:
+    title: "&9&lKapitel 7.5 &8» &eTeleportation: Lobby-Position aufnehmen"
+    question: "&7Soll jetzt die Location für die Lobby aufgenommen werden?"
+    btn-here: "&a&l[Da wo der Spieler steht]"
+    hover-here: "&aAktuelle Spielerposition als Lobby speichern"
+    saved: "&aLobby-Location wurde an deiner aktuellen Position gespeichert!"
+    invalid: "&cBitte klicke auf einen der beiden Knöpfe unten."
+  ch7_6:
+    title: "&9&lKapitel 7.6 &8» &eTeleportation: WorldSpawn-System"
+    question: "&7Soll das WorldSpawn-System von Backbone (&e/spawn&7, &e/setworldspawn&7) genutzt werden?"
+    saved-yes: "&aWorldSpawn-System aktiviert!"
+    saved-no: "&cWorldSpawn-System deaktiviert und Befehle unregistriert."
+  ch8:
+    title: "&9&lKapitel 8 &8» &eServer-MotD"
+    lines:
+      - "&7Wie soll die MotD vom Server heißen? Schreibe sie in den Chat (oder klicke auf Überspringen):"
+      - "&7Nutze &e\\n &7für einen Zeilenumbruch und &e<center>Text</c> &7zum Zentrieren einer Zeile."
+      - "&7Platzhalter: &e{pluginPrefix}&7, &e{players}&7, &e{slots}&7, &e{TPS}&7, &e{usedmb}&7, &e{freemb}&7, &e{maxmb}&7, &e{hh}&7:&e{mm}&7:&e{ss}&7, &e{day}&7.&e{month}&7.&e{year}"
+    saved: "&aServer-MotD aktualisiert! Vorschau:"
+  ch9_1:
+    title: "&9&lKapitel 9.1 &8» &eBeitritts-Nachricht (server.join)"
+    lines:
+      - "&7Soll die &eBeitritts-Nachricht &7verändert werden? Schreibe sie in den Chat oder drücke auf &c&l[Nein]&7:"
+      - "&8-- Spieler & Status -- &7{playername}, {playeruuid}, {ping}, {health}, {maxhealth}, {food}, {level}, {gamemode}, {fly}, {x}, {y}, {z}, {rank}, {rankPrefix}, {playerPrefix}, {nameColor}, {mute}, {muteUntil}"
+      - "&8-- Server & Welt -- &7{pluginPrefix}, {slots}, {players}, {online}, {worldName}, {world_players}, {hh}, {mm}, {ss}, {day}, {month}, {year}"
+      - "&8-- Economy -- &7{cash}, {cashSymbol}, {cashCirc}"
+    saved: "&aBeitritts-Nachricht gespeichert! Vorschau: &r{preview}"
+    kept: "&7Beitritts-Nachricht unverändert gelassen."
+  ch9_2:
+    title: "&9&lKapitel 9.2 &8» &eVerlassen-Nachricht (server.leave)"
+    lines:
+      - "&7Soll die &eVerlassen-Nachricht &7verändert werden? Schreibe sie in den Chat oder drücke auf &c&l[Nein]&7:"
+      - "&8-- Spieler & Status -- &7{playername}, {playeruuid}, {ping}, {health}, {maxhealth}, {food}, {level}, {gamemode}, {fly}, {x}, {y}, {z}, {rank}, {rankPrefix}, {playerPrefix}, {nameColor}, {mute}, {muteUntil}"
+      - "&8-- Server & Welt -- &7{pluginPrefix}, {slots}, {players}, {online}, {worldName}, {world_players}, {hh}, {mm}, {ss}, {day}, {month}, {year}"
+      - "&8-- Economy -- &7{cash}, {cashSymbol}, {cashCirc}"
+    saved: "&aVerlassen-Nachricht gespeichert! Vorschau: &r{preview}"
+    kept: "&7Verlassen-Nachricht unverändert gelassen."
+  ch10:
+    title: "&9&lKapitel 10 &8» &eRAM Compacting"
+    lines:
+      - "&7Soll Backbone selbstständig dafür sorgen, dass der RAM-Verbrauch vom Plugin so niedrig wie möglich ist?"
+      - "&8(Hinweis: Starkes Auslagern auf die Festplatte kann auf langsamen Laufwerken zu kurzen Rucklern führen)"
+    btn-fast: "&c&l[Schneller dafür höher Ram verbrauch]"
+    hover-fast: "&7Hält Caches im Arbeitsspeicher für maximale Geschwindigkeit"
+    btn-balanced: "&e&l[Ausgewogen]"
+    hover-balanced: "&7Lagert ungenutzte Daten regelmäßig schonend aus"
+    btn-light: "&a&l[Langsamer dafür leichter auf dem Ram]"
+    hover-light: "&7Lagert Daten aggressiv auf die Festplatte aus für minimalen RAM-Verbrauch"
+    saved: "&aRAM-Compacting-Modus gesetzt auf: &e{mode}&a!"
+    invalid: "&cBitte klicke auf eine der drei RAM-Compacting-Optionen."
+
+msg:
+  usage: "&cVerwendung: &e/msg <spieler> <nachricht>"
+  format-sender: "&7[&6Du &7-> {receiver}&7] &f{message}"
+  format-receiver: "&7[{sender} &7-> &6Dir&7] &f{message}"
+  self: "&cDu kannst dir nicht selbst private Nachrichten schreiben!"
+  console-name: "&cKonsole"
+  target-in-setup: "&cDieser Spieler richtet gerade den Server ein und empfängt keine Nachrichten!"
+  target-muted: "&cDieser Spieler ist momentan gemutet und kann nicht antworten!"
+  disabled: "&cPrivate Nachrichten sind aktuell auf diesem Server deaktiviert!"
+  console-spy: "&7[MSG] {sender} -> {receiver}: {message}"
+
+reply:
+  usage: "&cVerwendung: &e/reply <nachricht>"
+  no-target: "&cDu hast niemanden, dem du antworten kannst!"
+
+compact:
+  header: "&8&m----------------&r &9&lBackbone RAM Compact &8&m----------------"
+  offloaded: "&8» &7Auf Festplatte ausgelagerte Cache-Dateien: &e{files}"
+  memory: "&8» &7RAM-Verbrauch: &c{before} MB &8➔ &a{after} MB"
+  saved: "&8» &7Eingesparter RAM: &a&l{saved} MB &8(&7{ms}ms&8)"
+  footer: "&8&m------------------------------------------------------"
+
+ram:
+  header: "&8&m----------------&r &9&lBackbone RAM Monitor &8&m----------------"
+  overview: "&8» &7Heap-RAM: {bar} &e{used} MB &7/ &e{max} MB &8(&e{percent}%&8, &7Zugewiesen: &e{allocated} MB&8)"
+  mode-line: "&8» &7Compacting-Modus: &e{mode}"
+  mode:
+    fast: "&cSchneller (Höherer RAM-Verbrauch)"
+    balanced: "&eAusgewogen"
+    light: "&aLeichter auf dem RAM (Festplatten-Auslagerung)"
+  processes-header: "&9&lProzess- & Subsystem-Aufschlüsselung:"
+  process:
+    server-jvm: "&8» &eJava Server-Prozess (PID {pid})&7: &f{heap} MB Heap &8| &f{nonheap} MB Non-Heap &8| &e{threads} Threads"
+    worlds: "&8» &eWelten & Chunks&7: ~&f{mb} MB &8(&e{chunks} &7Chunks, &e{entities} &7Entities, &e{tiles} &7TileEntities&8)"
+    backbone: "&8» &eBackbone Plugin&7: ~&f{mb} MB &8(&e{files} &7Cache-Dateien / &e{keys} &7Keys, &e{ranks} &7Ränge, &e{sb} &7Boards&8)"
+    plugins: "&8» &ePlugins & Scheduler&7: &e{plugins} &7aktive Plugins &8| &e{tasks} &7geplante Tasks"
+  pools-header: "&9&lJVM Speicher-Pools:"
+  pool-entry: "  &8- &7{name}: &e{used} MB"
+  compact-btn: "&a&l[⚡ Jetzt /compact ausführen & RAM freigeben]"
+  compact-hover: "&aKlicke hier, um /compact auszuführen"
+  footer: "&8&m------------------------------------------------------"
+
+health:
+  header: "&8&m--------------&r &9&lBackbone Server Health &8&m--------------"
+  overall-status: "&8» &7Gesamtzustand: {status} &8| &7Uptime: &e{uptime}"
+  status:
+    excellent: "&a&l✔ EXZELLENT"
+    warning: "&e&l⚠ AUFFÄLLIG"
+    critical: "&c&l✖ KRITISCH (LAG)"
+  tps-line: "&8» &7TPS (1m/5m/15m): {tps_1m}&7, {tps_5m}&7, {tps_15m} &8| &7Tick (MSPT): &e{mspt}ms &8(&7Spitze: &c{max_mspt}ms&8)"
+  system-line: "&8» &7CPU: &e{cpu}% &8(&7System: &e{sys_cpu}%&8) &8| &7RAM: &e{used_mb}/{max_mb} MB &8(&e{ram_percent}%&8)"
+  world-stats: "&8» &7Geladen: &e{chunks} &7Chunks &8| &e{entities} &7Entities (&e{items} &7Drops) &8| &e{tiles} &7Tiles (&e{hoppers} &7Trichter)"
+  diagnosis:
+    header: "&9&lPerformance- & TPS-Diagnose:"
+    healthy: "  &a✔ Keine Engpässe erkannt. Der Server läuft flüssig und stabil."
+    low-tps: "  &c✖ Niedrige TPS ({tps}) / Hohe Tick-Dauer ({mspt}ms > 50ms): Der Hauptthread ist überlastet."
+    tick-spikes: "  &e⚠ Tick-Spitzen erkannt (Peak: {max_mspt}ms): Es treten vereinzelte Ruckler auf."
+    high-entities: "  &e⚠ Sehr viele Entities ({entities} gesamt, {mobs} Mobs): Mob-Farmen oder Ansammlungen bremsen Ticks."
+    high-items: "  &e⚠ Viele herumliegende Items ({items} Drops): Nicht aufgesammelte Farm-Items."
+    high-tiles: "  &e⚠ Hohe Block-Entity-Last ({tiles} Tiles, {hoppers} Trichter): Große Trichter-Ketten oder Sortiersysteme."
+    high-chunks: "  &e⚠ Viele geladene Chunks ({chunks}): Hohe Sichtweite oder weit verteilte Spieler."
+    high-ram: "  &c✖ Kritische RAM-Auslastung ({percent}%): Gefahr von Garbage-Collection-Rucklern! Nutze &e/compact&c."
+    high-cpu: "  &c✖ Hohe CPU-Auslastung ({cpu}%): Prozessor-Limit erreicht."
+    lagmachine-suspected: "  &c✖ {count} auffällige(r) Chunk(s) mit extremer Entity-/Trichter-Dichte gefunden (mögliche Lag-Maschine)!"
+  lagmachine:
+    header: "&9&lLag-Maschinen & Chunk-Hotspot Scanner:"
+    none: "  &a✔ Keine verdächtigen Chunks oder Lag-Maschinen in geladenen Chunks gefunden."
+    entry: "  &c#{index} &e{world} &7(&fX:{x}, Y:{y}, Z:{z}&7) &8- &6{type} &8[&7Ent: &e{entities}&7, Tiles: &e{tiles}&7, Trichter: &e{hoppers}&8]"
+    tp-btn: "&b&l[➔ Teleportieren]"
+    tp-hover: "&bKlicke, um nach {world} ({x}, {y}, {z}) zu teleportieren"
+    type:
+      hoppers: "Trichter-Kette / Sortieranlage"
+      items: "Item-Drop-Überflutung"
+      contraption: "ArmorStand- / Minecart-Lag-Maschine"
+      mobfarm: "Mob-Farm / Entity-Massierung"
+      tiles: "Hohe Block-Entity- / Redstone-Dichte"
+      general: "Hohe Chunk-Auslastung"
+  tp-world-not-found: "&cDie Welt &e{world} &ckonnte nicht gefunden werden."
+  tp-success: "&aZum Chunk-Hotspot in &e{world} &7(&e{x}, {y}, {z}&7) teleportiert."
+  footer: "&8&m------------------------------------------------------"
+
+
+slowchat:
+  usage: "&cVerwendung: &e/{label} [Dauer|perm|off]"
+  disabled-broadcast: "&7Der Slowchat wurde von &e{sender} &cdeaktiviert&7."
+  enabled-broadcast-permanent: "&7Der Slowchat wurde von &e{sender} &adauerhaft aktiviert&7."
+  enabled-broadcast-temporary: "&7Der Slowchat wurde von &e{sender} &afür &e{duration} &aaktiviert&7."
+  invalid-duration: "&cBitte gib eine gültige Zeitdauer an (z.B. 10m, 1h, 30s) oder perm!"
+  cooldown-message: "&cDer Slowchat ist aktiv! Du kannst erst in &e{seconds}s &cwieder schreiben."
+
+staffchat:
+  usage: "&cVerwendung: &e/{label} <Nachricht>"
+  format: "&8[&cStaffChat&8] &e{sender}&8: &f{message}"
+
+chatclear:
+  broadcast: "&7Der Chat wurde von &e{sender} &ageleert&7."
+
+
+back:
+  no-location: "&cDu hast keinen gespeicherten letzten Todesort!"
+  success: "&aDu wurdest zu deinem letzten Todesort teleportiert!"
+
+
+heal:
+  success-self: "&aDu wurdest geheilt!"
+  success-other: "&aDu hast &e{player} &ageheilt!"
+  received: "&aDu wurdest von &e{sender} &ageheilt!"
+
+feed:
+  success-self: "&aDein Hunger wurde gestillt!"
+  success-other: "&aDu hast den Hunger von &e{player} &agestillt!"
+  received: "&aDein Hunger wurde von &e{sender} &agestillt!"
+
+speed:
+  usage: "&cVerwendung: &e/{label} [Spieler] <walk|fly> <1-100>"
+  invalid-type: "&cBitte gib als Typ 'walk' oder 'fly' an!"
+  invalid-range: "&cDie Geschwindigkeit muss zwischen &e1 &cund &e100 &cliegen (1 = normal)!"
+  type-walk: "Lauf"
+  type-fly: "Flug"
+  success-self: "&aDeine &e{type}geschwindigkeit &awurde auf &e{speed} &agesetzt!"
+  success-other: "&aDie &e{type}geschwindigkeit &avon &e{player} &awurde auf &e{speed} &agesetzt!"
+  received: "&aDeine &e{type}geschwindigkeit &awurde von &e{sender} &aauf &e{speed} &agesetzt!"
+
+skull:
+  item-name: "&eKopf von {player}"
+  success: "&aDu hast den Kopf von &e{player} &aerhalten!"
+
+
+trash:
+  title: "&8Mülleimer"
+  opened: "&7Mülleimer geöffnet. &cAlle hineingelegten Gegenstände werden beim Schließen dauerhaft gelöscht!"
+
+
+actionbar:
+  usage: "&cVerwendung: &e/{label} <broadcast|Spieler> <Text> <Dauer|perm> &coder &e/{label} <broadcast|Spieler> <clear|stop>"
+  invalid-duration: "&cBitte gib eine gültige Zeitdauer an (z.B. 30s, 5m, 1h, 30d) oder perm!"
+  cleared-broadcast: "&aDie Actionbar-Nachricht für alle Spieler wurde beendet."
+  cleared-player: "&aDie Actionbar-Nachricht für &e{player} &awurde beendet."
+  success-broadcast-permanent: "&aDauerhafte Actionbar-Nachricht an alle Spieler gesendet."
+  success-broadcast-temporary: "&aActionbar-Nachricht für &e{duration} &aan alle Spieler gesendet."
+  success-player-permanent: "&aDauerhafte Actionbar-Nachricht an &e{player} &agesendet."
+  success-player-temporary: "&aActionbar-Nachricht für &e{duration} &aan &e{player} &agesendet."

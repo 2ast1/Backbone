@@ -1,0 +1,734 @@
+name: Backbone
+description: $description
+prefix: Backbone
+version: '${version}'
+
+main: de.basti.backbone.Backbone
+api-version: '26.1'
+softdepend: [ Vault ]
+
+authors: [ 2ast1 ]
+website: bttlr.de
+
+commands:
+  ban:
+    description: Bans a player temporarily or permanently
+    permission: backbone.ban
+    usage: /ban <player> [time] [reason]
+  unban:
+    description: Lifts a player's ban
+    permission: backbone.unban
+    usage: /unban <player>
+  mute:
+    description: Mutes a player temporarily or permanently
+    permission: backbone.mute
+    usage: /mute <player> [time] [reason]
+  unmute:
+    description: Lifts a player's mute
+    permission: backbone.unmute
+    usage: /unmute <player>
+  warn:
+    description: Warns a player with a specified reason
+    permission: backbone.warn
+    usage: /warn <player> <reason>
+  warns:
+    description: Displays all warnings of a player
+    permission: backbone.warn
+    usage: /warns <player>
+  kick:
+    description: Kicks an online player from the server
+    permission: backbone.kick
+    usage: /kick <player> [reason]
+  prefix:
+    description: Displays a player's prefix
+    permission: backbone.prefix
+    usage: /prefix [player]
+  setprefix:
+    description: Sets the prefix for yourself or another player
+    permission: backbone.prefix
+    usage: /setprefix [player] <prefix>
+  removeprefix:
+    description: Removes the prefix from yourself or another player
+    aliases: [ delprefix, deleteprefix ]
+    permission: backbone.prefix
+    usage: /removeprefix [player]
+  namecolor:
+    description: Displays a player's name color
+    permission: backbone.namecolor
+    usage: /namecolor [player]
+  setnamecolor:
+    description: Sets the name color for yourself or another player
+    aliases: [ setNameColor ]
+    permission: backbone.namecolor
+    usage: /setnamecolor [player] <colorcode>
+  removenamecolor:
+    description: Removes the name color from yourself or another player
+    aliases: [ removeNameColor, delnamecolor, deletenamecolor ]
+    permission: backbone.namecolor
+    usage: /removenamecolor [player]
+  backbone:
+    description: Main command for the Backbone plugin
+    aliases: [ bb ]
+    permission: backbone.admin
+    usage: /backbone <setup|reload|github|version>
+  compact:
+    description: Offloads unused plugin caches from RAM to disk and frees memory
+    permission: backbone.compact
+    usage: /compact
+  ram:
+    description: Displays detailed RAM usage by process, subsystem, and memory pool
+    permission: backbone.ram
+    usage: /ram
+  health:
+    description: Displays detailed TPS, server health diagnostics, and scans for lag machines
+    permission: backbone.health
+    usage: /health
+  rank:
+    description: Manages ranks, permissions, and rank purchases
+    aliases: [ ranks ]
+    usage: /rank <help|list|info|set|create|delete|setdefault|perm|player|promote|demote|offer|buy|setprice|setduration|setprev|setnext|shop|setname|setcolor|setprefix|enable|disable>
+  setrank:
+    description: Assigns a rank to a player
+    permission: backbone.rank.set
+    usage: /setrank <player> <rank> [duration]
+
+  # Inventory & Enderchest
+  inventory:
+    description: Opens and manages a player's inventory (including offline players)
+    aliases: [ inv, openinv, invsee ]
+    permission: backbone.inventory
+    usage: /inventory <player>
+  enderchest:
+    description: Opens a player's Enderchest (including offline players)
+    aliases: [ ec, openenderchest, openec, ender ]
+    permission: backbone.enderchest
+    usage: /enderchest [player]
+  craft:
+    description: Opens a portable crafting table anywhere
+    aliases: [ workbench, wbench ]
+    permission: backbone.craft
+    usage: /craft
+  trash:
+    description: Opens a disposal inventory that destroys inserted items
+    aliases: [ dispose, muell ]
+    permission: backbone.trash
+    usage: /trash
+
+  # Flight, Hide & Gamemode Commands
+  fly:
+    description: Enables or disables flight mode
+    aliases: [ flight ]
+    permission: backbone.fly
+    usage: /fly [player]
+  hide:
+    description: Makes you completely invisible to all players without backbone.hide.see
+    aliases: [ vanish ]
+    permission: backbone.hide
+    usage: /hide [player]
+  gamemode:
+    description: Changes the gamemode
+    aliases: [ gm ]
+    permission: backbone.gamemode
+    usage: /gamemode <0|1|2|3|survival|creative|adventure|spectator> [player]
+  creative:
+    description: Sets the gamemode to Creative
+    aliases: [ c, gmc ]
+    permission: backbone.gamemode
+    usage: /creative [player]
+  survival:
+    description: Sets the gamemode to Survival
+    aliases: [ s, gms ]
+    permission: backbone.gamemode
+    usage: /survival [player]
+  adventure:
+    description: Sets the gamemode to Adventure
+    aliases: [ a, gma ]
+    permission: backbone.gamemode
+    usage: /adventure [player]
+  spectator:
+    description: Sets the gamemode to Spectator
+    aliases: [ sp, gmsp ]
+    permission: backbone.gamemode
+    usage: /spectator [player]
+  heal:
+    description: Restores health, food and saturation for a player
+    permission: backbone.heal
+    usage: /heal [player]
+  feed:
+    description: Fills a player's hunger bar and saturation
+    permission: backbone.feed
+    usage: /feed [player]
+  speed:
+    description: Adjusts walking or flying speed (1-100)
+    permission: backbone.speed
+    usage: /speed [player] <walk|fly> <1-100>
+  skull:
+    description: Gives the head of yourself or specified player
+    aliases: [ head ]
+    permission: backbone.skull
+    usage: /skull [player]
+
+  # Maintenance Mode
+  maintenance:
+    description: Manages maintenance mode
+    aliases: [ wartung, maintnaice, maintance ]
+    permission: backbone.maintenance
+    usage: /maintenance [on|off|toggle|status|message <message>|reset]
+
+  # Time Control
+  day:
+    description: Sets the time to Day
+    permission: backbone.time
+    usage: /day
+  night:
+    description: Sets the time to Night
+    permission: backbone.time
+    usage: /night
+  sunrise:
+    description: Sets the time to Sunrise
+    permission: backbone.time
+    usage: /sunrise
+  sunset:
+    description: Sets the time to Sunset
+    permission: backbone.time
+    usage: /sunset
+
+  # Weather Control
+  sun:
+    description: Sets the weather to sunny
+    aliases: [ clear ]
+    permission: backbone.weather
+    usage: /sun
+  rain:
+    description: Sets the weather to rain
+    permission: backbone.weather
+    usage: /rain
+  storm:
+    description: Sets the weather to storm
+    aliases: [ thunder ]
+    permission: backbone.weather
+    usage: /storm
+
+  # Teleport Requests (TPA)
+  tpa:
+    description: Sends a teleport request to a player or accepts/denies one
+    permission: backbone.tpa
+    usage: /tpa <player|accept|deny>
+  tpaccept:
+    description: Accepts a pending teleport request
+    aliases: [ tpyes ]
+    permission: backbone.tpa
+    usage: /tpaccept
+  tpdeny:
+    description: Denies a pending teleport request
+    aliases: [ tpno ]
+    permission: backbone.tpa
+    usage: /tpdeny
+
+  # Lobby System
+  lobby:
+    description: Teleports to the server lobby
+    aliases: [ hub ]
+    permission: backbone.lobby
+    usage: /lobby
+  setlobby:
+    description: Sets the server lobby location
+    permission: backbone.setlobby
+    usage: /setlobby [true|false]
+
+  # Warp System
+  warp:
+    description: Teleports to a warp or manages blacklisted worlds
+    permission: backbone.warp
+    usage: /warp [name|blacklistworld <world>]
+  warps:
+    description: Lists all available warps
+    permission: backbone.warp
+    usage: /warps
+  setwarp:
+    description: Creates a new warp
+    permission: backbone.setwarp
+    usage: /setwarp <name>
+  delwarp:
+    description: Deletes an existing warp
+    aliases: [ deletewarp, removewarp ]
+    permission: backbone.delwarp
+    usage: /delwarp <name>
+
+  # Home System
+  home:
+    description: Teleports to one of your homes or manages blacklisted worlds
+    permission: backbone.home
+    usage: /home [name|blacklistworld <world>]
+  homes:
+    description: Lists all of your homes
+    permission: backbone.home
+    usage: /homes
+  sethome:
+    description: Sets a new home
+    permission: backbone.sethome
+    usage: /sethome [name]
+  delhome:
+    description: Deletes an existing home
+    aliases: [ deletehome, removehome ]
+    permission: backbone.delhome
+    usage: /delhome [name]
+
+  # Spawn System
+  spawn:
+    description: Teleports to the spawn of the current world
+    permission: backbone.spawn
+    usage: /spawn
+  setworldspawn:
+    description: Sets the spawn point for the current world
+    permission: backbone.setworldspawn
+    usage: /setworldspawn [true|false]
+  back:
+    description: Teleports you to your last death location
+    permission: backbone.back
+    usage: /back
+
+  # Economy System
+  money:
+    description: Displays or manages your own or another player's balance
+    aliases: [ bal, balance ]
+    permission: backbone.money
+    usage: /money [player|give|take|set]
+  pay:
+    description: Transfers money to another player
+    permission: backbone.pay
+    usage: /pay <player> <amount>
+  paytoggle:
+    description: Toggles whether you can receive money payments
+    aliases: [ togglepay ]
+    permission: backbone.pay
+    usage: /paytoggle
+  baltop:
+    description: Displays the richest players on the server
+    aliases: [ balancetop, moneytop ]
+    permission: backbone.money.others
+    usage: /baltop [page]
+
+  # Scoreboard System
+  scoreboard:
+    description: Toggles the scoreboard or manages scoreboards
+    aliases: [ sb ]
+    permission: backbone.scoreboard
+    usage: /scoreboard [on|off|toggle|reload|list|show|hide]
+
+  # Private Messaging
+  msg:
+    description: Sends a private message to a player or console
+    aliases: [ tell, whisper, w, m, pm, dm ]
+    permission: backbone.msg
+    usage: /msg <player> <message>
+  reply:
+    description: Replies to the last received private message
+    aliases: [ r ]
+    permission: backbone.reply
+    usage: /reply <message>
+  slowchat:
+    description: Restricts chat frequency or toggles slowchat
+    permission: backbone.slowchat
+    usage: /slowchat [duration]
+  staffchat:
+    description: Sends messages in the team staff chat
+    aliases: [ sc ]
+    permission: backbone.staffchat
+    usage: /staffchat <message>
+  chatclear:
+    description: Clears the public chat
+    aliases: [ cc, clearchat ]
+    permission: backbone.chatclear
+    usage: /chatclear
+  actionbar:
+    description: Displays a custom action bar message to a player or all players
+    aliases: [ ab ]
+    permission: backbone.actionbar
+    usage: /actionbar <broadcast|player> <text> <duration|perm>
+
+permissions:
+  backbone.*:
+    description: Grants access to all Backbone commands and features
+    default: op
+    children:
+      backbone.admin: true
+      backbone.setup: true
+      backbone.reload: true
+      backbone.compact: true
+      backbone.ram: true
+      backbone.health: true
+      backbone.ban: true
+      backbone.unban: true
+      backbone.mute: true
+      backbone.unmute: true
+      backbone.warn: true
+      backbone.kick: true
+      backbone.automod.bypass: true
+      backbone.maintenance: true
+      backbone.prefix: true
+      backbone.prefix.others: true
+      backbone.prefix.admin: true
+      backbone.setprefix: true
+      backbone.removeprefix: true
+      backbone.namecolor: true
+      backbone.namecolor.others: true
+      backbone.setnamecolor: true
+      backbone.removenamecolor: true
+      backbone.rank: true
+      backbone.rank.list: true
+      backbone.rank.info: true
+      backbone.rank.set: true
+      backbone.rank.admin: true
+      backbone.rank.buy: true
+      backbone.chat.color: true
+      backbone.msg: true
+      backbone.reply: true
+      backbone.inventory: true
+      backbone.inventory.advanced: true
+      backbone.enderchest: true
+      backbone.craft: true
+      backbone.trash: true
+      backbone.fly: true
+      backbone.fly.other: true
+      backbone.hide: true
+      backbone.hide.other: true
+      backbone.hide.see: true
+      backbone.gamemode: true
+      backbone.gamemode.others: true
+      backbone.survival: true
+      backbone.creative: true
+      backbone.adventure: true
+      backbone.spectator: true
+      backbone.heal: true
+      backbone.heal.others: true
+      backbone.feed: true
+      backbone.feed.others: true
+      backbone.speed: true
+      backbone.speed.others: true
+      backbone.skull: true
+      backbone.skull.others: true
+      backbone.time: true
+      backbone.day: true
+      backbone.night: true
+      backbone.sunrise: true
+      backbone.sunset: true
+      backbone.weather: true
+      backbone.sun: true
+      backbone.rain: true
+      backbone.storm: true
+      backbone.tpa: true
+      backbone.lobby: true
+      backbone.setlobby: true
+      backbone.warp: true
+      backbone.setwarp: true
+      backbone.delwarp: true
+      backbone.warp.blacklist: true
+      backbone.home: true
+      backbone.sethome: true
+      backbone.delhome: true
+      backbone.home.blacklist: true
+      backbone.home.unlimited: true
+      backbone.spawn: true
+      backbone.setworldspawn: true
+      backbone.back: true
+      backbone.money: true
+      backbone.money.others: true
+      backbone.money.give: true
+      backbone.money.take: true
+      backbone.money.set: true
+      backbone.pay: true
+      backbone.pay.bypass: true
+      backbone.scoreboard: true
+      backbone.scoreboard.admin: true
+      backbone.slowchat: true
+      backbone.slowchat.bypass: true
+      backbone.staffchat: true
+      backbone.chatclear: true
+      backbone.chatclear.bypass: true
+      backbone.actionbar: true
+  backbone.admin:
+    description: Grants administrative access to Backbone systems
+    default: op
+  backbone.setup:
+    description: Allows running the interactive Backbone setup wizard
+    default: op
+  backbone.reload:
+    description: Allows reloading Backbone configurations
+    default: op
+  backbone.compact:
+    description: Allows running /compact
+    default: op
+  backbone.ram:
+    description: Allows viewing /ram statistics
+    default: op
+  backbone.health:
+    description: Allows viewing /health diagnostics
+    default: op
+  backbone.ban:
+    description: Allows banning players
+    default: op
+  backbone.unban:
+    description: Allows unbanning players
+    default: op
+  backbone.mute:
+    description: Allows muting players
+    default: op
+  backbone.unmute:
+    description: Allows unmuting players
+    default: op
+  backbone.warn:
+    description: Allows warning players and viewing warnings
+    default: op
+  backbone.kick:
+    description: Allows kicking players from the server
+    default: op
+  backbone.automod.bypass:
+    description: Exempts a player from AutoMod chat filters
+    default: op
+  backbone.maintenance:
+    description: Allows managing maintenance mode and joining during maintenance
+    default: op
+  backbone.prefix:
+    description: Allows viewing and setting your own prefix
+    default: op
+  backbone.prefix.others:
+    description: Allows viewing, setting, and removing prefixes of other players
+    default: op
+  backbone.prefix.admin:
+    description: Allows toggling the prefix system globally
+    default: op
+  backbone.setprefix:
+    description: Allows setting the prefix for yourself or another player
+    default: op
+  backbone.removeprefix:
+    description: Allows removing the prefix from yourself or another player
+    default: op
+  backbone.namecolor:
+    description: Allows viewing and setting your own name color
+    default: op
+  backbone.namecolor.others:
+    description: Allows viewing, setting, and removing name colors of other players
+    default: op
+  backbone.setnamecolor:
+    description: Allows setting the name color for yourself or another player
+    default: op
+  backbone.removenamecolor:
+    description: Allows removing the name color from yourself or another player
+    default: op
+  backbone.rank:
+    description: Allows managing ranks and permissions
+    default: op
+  backbone.rank.list:
+    description: Allows listing all ranks
+    default: op
+  backbone.rank.info:
+    description: Allows viewing detailed rank information
+    default: op
+  backbone.rank.set:
+    description: Allows assigning ranks to players
+    default: op
+  backbone.rank.admin:
+    description: Allows creating, deleting, and configuring ranks
+    default: op
+  backbone.inventory:
+    description: Allows viewing and editing player inventories
+    default: op
+  backbone.inventory.advanced:
+    description: Allows using advanced container preview in /inventory
+    default: op
+  backbone.enderchest:
+    description: Allows viewing and editing player enderchests
+    default: op
+  backbone.craft:
+    description: Allows opening a portable crafting table
+    default: op
+  backbone.trash:
+    description: Allows opening the trash disposal inventory
+    default: op
+  backbone.fly:
+    description: Allows toggling flight for yourself
+    default: op
+  backbone.fly.other:
+    description: Allows toggling flight for other players
+    default: op
+  backbone.hide:
+    description: Allows hiding yourself with /hide
+    default: op
+  backbone.hide.other:
+    description: Allows toggling /hide for other players
+    default: op
+  backbone.hide.see:
+    description: Allows seeing hidden players
+    default: op
+  backbone.gamemode:
+    description: Allows changing gamemodes
+    default: op
+  backbone.gamemode.others:
+    description: Allows changing gamemodes of other players
+    default: op
+  backbone.survival:
+    description: Allows switching to Survival mode
+    default: op
+  backbone.creative:
+    description: Allows switching to Creative mode
+    default: op
+  backbone.adventure:
+    description: Allows switching to Adventure mode
+    default: op
+  backbone.spectator:
+    description: Allows switching to Spectator mode
+    default: op
+  backbone.heal:
+    description: Allows healing yourself
+    default: op
+  backbone.heal.others:
+    description: Allows healing other players
+    default: op
+  backbone.feed:
+    description: Allows feeding yourself
+    default: op
+  backbone.feed.others:
+    description: Allows feeding other players
+    default: op
+  backbone.speed:
+    description: Allows adjusting your own movement and fly speed
+    default: op
+  backbone.speed.others:
+    description: Allows adjusting other players' speed
+    default: op
+  backbone.skull:
+    description: Allows obtaining your own head
+    default: op
+  backbone.skull.others:
+    description: Allows obtaining other players' heads
+    default: op
+  backbone.time:
+    description: Allows changing world time
+    default: op
+  backbone.day:
+    description: Allows setting the time to Day
+    default: op
+  backbone.night:
+    description: Allows setting the time to Night
+    default: op
+  backbone.sunrise:
+    description: Allows setting the time to Sunrise
+    default: op
+  backbone.sunset:
+    description: Allows setting the time to Sunset
+    default: op
+  backbone.weather:
+    description: Allows changing world weather
+    default: op
+  backbone.sun:
+    description: Allows setting the weather to sunny
+    default: op
+  backbone.rain:
+    description: Allows setting the weather to rain
+    default: op
+  backbone.storm:
+    description: Allows setting the weather to storm
+    default: op
+  backbone.tpa:
+    description: Allows using /tpa, /tpaccept, and /tpdeny
+    default: op
+  backbone.lobby:
+    description: Allows teleporting to the lobby
+    default: op
+  backbone.setlobby:
+    description: Allows setting the lobby location
+    default: op
+  backbone.warp:
+    description: Allows teleporting to warps
+    default: op
+  backbone.setwarp:
+    description: Allows creating warps
+    default: op
+  backbone.delwarp:
+    description: Allows deleting warps
+    default: op
+  backbone.warp.blacklist:
+    description: Allows managing warp world blacklists
+    default: op
+  backbone.home:
+    description: Allows teleporting to homes
+    default: op
+  backbone.sethome:
+    description: Allows setting homes
+    default: op
+  backbone.delhome:
+    description: Allows deleting homes
+    default: op
+  backbone.home.blacklist:
+    description: Allows managing home world blacklists
+    default: op
+  backbone.home.unlimited:
+    description: Allows setting an unlimited number of homes
+    default: op
+  backbone.spawn:
+    description: Allows teleporting to world spawn
+    default: op
+  backbone.setworldspawn:
+    description: Allows setting the world spawn
+    default: op
+  backbone.money:
+    description: Allows viewing your own balance
+    default: op
+  backbone.money.others:
+    description: Allows viewing other players' balances
+    default: op
+  backbone.money.give:
+    description: Allows giving money to players
+    default: op
+  backbone.money.take:
+    description: Allows taking money from players
+    default: op
+  backbone.money.set:
+    description: Allows setting a player's balance
+    default: op
+  backbone.pay:
+    description: Allows paying money to other players
+    default: op
+  backbone.pay.bypass:
+    description: Allows paying players who have payment transfers blocked
+    default: op
+  backbone.scoreboard:
+    description: Allows toggling your own scoreboard
+    default: op
+  backbone.scoreboard.admin:
+    description: Allows reloading, listing, and toggling scoreboards for other players
+    default: op
+  backbone.rank.buy:
+    description: Allows purchasing ranks using in-game currency
+    default: op
+  backbone.chat.color:
+    description: Allows using color codes in public chat
+    default: op
+  backbone.msg:
+    description: Allows sending direct private messages
+    default: op
+  backbone.reply:
+    description: Allows replying to direct private messages
+    default: op
+  backbone.slowchat:
+    description: Allows configuring and toggling slowchat
+    default: op
+  backbone.slowchat.bypass:
+    description: Allows bypassing slowchat cooldowns
+    default: op
+  backbone.staffchat:
+    description: Allows sending and receiving staff chat messages
+    default: op
+  backbone.chatclear:
+    description: Allows clearing the public chat
+    default: op
+  backbone.chatclear.bypass:
+    description: Prevents having your chat cleared by /chatclear
+    default: op
+  backbone.back:
+    description: Allows teleporting to your last death location
+    default: op
+  backbone.actionbar:
+    description: Allows sending timed or permanent action bar messages
+    default: op
